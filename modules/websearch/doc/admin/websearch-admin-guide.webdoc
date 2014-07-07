@@ -25,24 +25,45 @@
    <thead>
    <tr>
    <th class="errorboxheader">
+     <lang>
+     <en>
      WARNING: THIS ADMIN GUIDE IS NOT FULLY COMPLETED
+     </en>
+     <el>
+     ΠΡΟΣΟΧΗ: ΑΥΤΟΣ Ο ΟΔΗΓΟΣ ΓΙΑ ΔΙΑΧΕΙΡΗΣΤΕΣ ΔΕΝ ΕΙΝΑΙ ΠΛΗΡΩΣ ΟΛΟΚΛΗΡΩΜΕΝΟΣ
+     </el>
+     </lang>
    </th>
    </tr>
    </thead>
    <tbody>
    <tr>
    <td class="errorboxbody">
+   <lang>
+   <en>
      This Admin Guide is not yet completed.  Moreover, some
      admin-level functionality for this module exists only in the form of
      manual recipes.  We are in the process of developing both the
      guide as well as the web admin interface.  If you are interested
      in seeing some specific things implemented with high priority,
      please contact us at <CFG_SITE_SUPPORT_EMAIL>.  Thanks for your interest!
+     </en>
+     <el>
+     Αυτός ο οδηγός για δειχειρηστές δεν είναι ακόμα έτοιμος. Παρ' όλα αυτά, μερικές 
+     λειτουργίες για επίπεδο διαχειριστών για αυτή τη μονάδα(module) υπάρχουν μόνο στη 
+     μορφή των χειροκίνητων "συνταγών". Είμαστε στην διαδικασία της ανάπτυξης και του οδηγού, 
+     καθώς και της διεπαφής για διαχειρηστές. Αν σας ενδιαφέρει να δείτε κάποια συγκεκριμένα 
+     κομμάτια να υλοποιηθούν με υψηλή προτεραιότητα, παρακαλώ επικοινωνήστε μαζί μας στο 
+     <CFG_SITE_SUPPORT_EMAIL>. Ευχαριστούμε για το ενδιαφέρον!
+     </el>
+     </lang>
    </td>
    </tr>
    </tbody>
    </table>
 
+<lang>
+<en>
 <h2>Contents</h2>
 <strong>1. <a href="#1">Overview</a></strong><br />
 <strong>2. <a href="#2">Edit Collection Tree</a></strong><br />
@@ -72,8 +93,45 @@
 <strong>11. <a href="#11">Additional Information</a></strong><br />
 
 <a name="1"></a><h2>1. Overview</h2>
+</en>
+<el>
+<h2>Περιεχόμενα</h2>
+<strong>1. <a href="#1">Επισκόπηση</a></strong><br />
+<strong>2. <a href="#2">Επεξεργασία Συλλογής Δένδρου</a></strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1 <a href="#2.1">Προσθήκη νέας συλλογής</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2 <a href="#2.2">Προσθήκη συλλογής σε δένδρο</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.3 <a href="#2.3">Επεξεργασία υπάρχοντος δένδρου</a><br />
+<strong>3. <a href="#3">Επεξεργασία παραμέτρων συλλογής</a></strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1. <a href="#3.1">Τροποποίηση συλλογής ερωτημάτων(query)</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2. <a href="#3.2">Τροποποίηση περιορισμούς πρόσβασης</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.3. <a href="#3.3">Τροποποίηση μεταφράσεων</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.4. <a href="#3.4">Διαγραφή συλλογής</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.5. <a href="#3.5">Τροποποίηση portalboxes</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.6. <a href="#3.6">Τροποποίηση πεδίων αναζήτησης</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.7. <a href="#3.7">Τροποποίηση επιλογών αναζήτησης</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.8. <a href="#3.8">Τροποποίηση επιλογών ταξινόμησης</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.9. <a href="#3.9">Τροποποίηση επιλογών κατάταξης</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.10. <a href="#3.10">Τροποποίηση των μορφών εξόδου(output formats)</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.11. <a href="#3.11">Διαμόρφωση των σχετικών εξωτερικών συλλογών</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.12. <a href="#3.12">Λεπτομερείς επιλογές σελίδων αποτελεσμάτων(record pages)</a><br />
+<strong>4. <a href="#4">Εξωτερικές και φιλοξενούμενες συλλογές</a></strong><br />
+<strong>5. <a href="#5">Κατάσταση Webcoll</a></strong><br />
+<strong>6. <a href="#6">Κατάσταση συλλογών</a></strong><br />
+<strong>7. <a href="#7">Έλεγχος εξωτερικών συλλογών</a></strong><br />
+<strong>8. <a href="#8">Επεξεργασία παραμέτρων μηχανής αναζήτησης</a></strong><br />
+<strong>9. <a href="#9">Κρυφή μνήμη μηχανής αναζήτησης(cache)</a></strong><br />
+<strong>10. <a href="#10">Υπηρεσίες αναζήτησης</a></strong><br />
+<strong>11. <a href="#11">Προσθέτες πληροφορίες</a></strong><br />
 
-<p>WebSearch Admin interface will help you to configure the search
+<a name="1"></a><h2>1. Επισκόπηση</h2>
+
+</el>
+</lang>
+
+<p>
+<lang>
+<en>
+WebSearch Admin interface will help you to configure the search
 collections that the end-users see.  The WebSearch Admin functionality
 can be basically separated into several parts: (i) how to organize
 collections into <a href="#2">collection tree</a>; (ii) how to define
@@ -84,6 +142,13 @@ href="#5">search engine parameters</a>.  These issues will be
 subsequently described in the rest of this guide.
 
 <a name="2"></a><h2>2. Edit Collection Tree</h2>
+</en>
+<el>
+
+
+</el>
+</lang>
+
 
 <p>Metadata corpus in Invenio is organized into collections.  The
 collections are organized in a tree.  The collection tree is what the
