@@ -144,21 +144,48 @@ subsequently described in the rest of this guide.
 <a name="2"></a><h2>2. Edit Collection Tree</h2>
 </en>
 <el>
+Η διαχειριστική διεπαφή WebSearch θα σας βοηθήσει να διαμορφώσετε τις 
+συλλογές αναζήτησης που οι τελικοί χρήστες βλέπουν. Η διαχειριστική 
+λειτουργικότητα του WebSearch μπορεί βασικά να διαχωριστεί σε διάφορα κομμάτια:
+(i) πως να οργανώσετε τις συλλογές σε <a href="#2">collection tree</a>; 
+(ii) πως να καθορίσετε και να επεξεργαστείτε <a href="#3">collection parameters</a>;
+(iii) πως να ενημερώσετε την μνήμη συλλογών μέσω <a href="#4">webcoll daemon</a>;
+και (iv) πως να επηρεάσετε την συμπεριφορά των μηχανισμών αναζήτησης και να 
+τη ρύθμιση διαφόρων <a href="#5">παραμέτρων των μηχανών αναζήτησης</a>.  
+Τα θέματα αυτά θα περιγραφούν μεταγενέστερα στο υπόλοιπο αυτού του οδηγού.
 
-
+<a name="2"></a><h2>2. Επεξεργασία Συλλογής Δένδρου</h2>
 </el>
 </lang>
 
 
-<p>Metadata corpus in Invenio is organized into collections.  The
+<p>
+<lang>
+<en>
+Metadata corpus in Invenio is organized into collections.  The
 collections are organized in a tree.  The collection tree is what the
 end-users see when they start to navigate at <a
 href="<CFG_SITE_URL>"><CFG_SITE_NAME></a>.  The collection tree is similar to what
 other sites call Web Directories that organize Web into topical
 categories, such as <a href="http://www.google.com/dirhp">Google
 Directory</a>.
+</en>
+<el>
+Το σώμα των Μεταδεδομένων στο Invenio είναι οργανωμένο σε συλλογές. Οι
+συλλογές είναι οργανωμένες σ' ένα δένδρο. Το δένδρο συλλογών είναι αυτό 
+που βλέπουν οι τελικοί χρήστες όταν αρχίζουν να πλοηγούνται στο <a 
+href="<CFG_SITE_URL>"><CFG_SITE_NAME></a>. Το δένδρο συλλογών είναι παρόμοιο 
+με αυτό που άλλοι ιστότοποι αποκαλλούν Web Directories που οργανώνουν το Διαδίκτυο
+σε θεματικές κατηγορίες, όπως <a href="http://www.google.com/dirhp">Google
+Directory</a>.
+</el>
+</lang>
 
-<p>Note that Invenio permits every collection in the tree to have
+
+<p>
+<lang>
+<en>
+Note that Invenio permits every collection in the tree to have
 either "regular" or "virtual" sons.  In other words, every node in the
 collection tree may see either regular or virtual branches growing out
 of it.  This permits to create a tree with very complex, multi-level,
@@ -169,7 +196,26 @@ detail further below in the <a href="#2.2">section 2.2</a>.
 
 <a name="2.1"></a><h3>2.1 Add new collection</h3>
 
-<p>To add a new collection, enter its default name in the default
+</en>
+<el>
+Σημειώστε ότι το Invenio επιτρέπει οποιαδήποτε συλλοη στο δένδρο να έχει
+είτε "κανονικά" είτε "εικονικά" παιδιά. Με άλλα λόγια, μπορείτε να δείτε
+από κάθε κόμβο στο δένδρο συλλογών να βγαίνουν είτε κανονικά είτε εικονικά
+κλαδιά από αυτό. Αυτό επιτρέπει να δημιουργείτε ένα δένδρο με πολύ περίπλοκες, 
+πολυεπίπεδες ένθετες δομές από κανονικά και εικονικά κλαδιά, αν χρειαστεί, με
+στόχο να διευκολύνει την πλοήγηση στους τελικούς χρήστες από το ένα κλαδί στο 
+άλλο. Η διαφορά μεταξύ ενός κανονικού από ένα εικονικό κλαδί θα εξηγηθεί 
+λεπτομερώς παρακάτω στο <a href="#2.2">section 2.2</a>.
+
+<a name="2.1"></a><h3>2.1 Προσθήκη νέας συλλογής</h3>
+
+</el>
+</lang>
+
+<p>
+<lang>
+<en>
+To add a new collection, enter its default name in the default
 language of the installation and click on the ADD button
 to add it.  There are two important actions that you have to perform
 after adding a collection:
@@ -187,18 +233,64 @@ after adding a collection:
         collection to tree</a> below.
 
     </ul>
+</en>
+<el>
+Για να προσθέσετε μία καινούρια συλλογή, εισάγετε το εξ' ορισμού όνομα 
+στην προεπιλεγμένη γλώσσα εγκατάστασης και πατήστε το κουμπί ADD για να
+το εισάγετε. Υπάρχουν δύο σημαντικές ενέργειες που θα πρέπει να κάνετε
+αφού εισάγετε μία συλλογή:
 
-<p>After you edit these two things, the collection is fully usable for
+    <ul>
+
+    <li>Θα πρέπει να ορίσετε το σύνολο των εγγραφών που ανήκουν σε αυτή 
+	την συλλογή. Αυτό γίνεται με τον καθορισμό ενός ερωτήματος στην 
+	στην μηχανή αναζήτησης που θα επιστρέφει όλες τις εγγραφές που 
+	ανήκουν σε αυτή την συλλογή Δείτε συμβουλές στο <a href="#2.2">add
+        collection to tree</a> παρακάτω.
+
+    <li>Για να γίνεται εμφάνιση της συλλογής στο δένδρο πλοήγησης συλλογών,
+	θα πρέπει να το συνδέσετε με κάποια ήδη υπάρχουσα συλλογή στο δένδρο.
+	Δείτε συμβουλές στο <a href="#2.2">add collection to tree</a> παρακάτω.
+
+    </ul>
+</el>
+</lang>
+
+<p>
+  <lang>
+   <en>
+   After you edit these two things, the collection is fully usable for
    the search interface.  It will appear in the search interface after
    the next run of the <a href="#4">WebColl Daemon</a>.
-
-<p>However, you will probably want to customize further things, like
+   </en>
+   <el>
+   Αφού επεξεργαστείτε αυτά τα δύο πράγματα, η συλλογή είναι πλήρως 
+   εκμεταλλεύσιμη για την διεπαφή αναζήτησης. Θα εμφανίστεί στο περιβ-
+   άλλον αναζήτησης μετά την επόμενη εκτέλεση του <a href="#4">WebColl Daemon</a>.
+   </el>
+  </lang>
+  
+<p>
+<lang>
+<en>
+   However, you will probably want to customize further things, like
    define collection name translation in various languages, define
    collection web page portalboxes, define search options, etc, as
    explained in this guide under the section <a href="#3">Edit
    Collection Parameters</a>.
 
 <a name="2.2"></a><h3>2.2 Add collection to tree</h3>
+</en>
+<el>
+   Ωστόσο, μάλλον θα θέλετε να προσαρμόσετε περαιτέρω τα πράγματα, 
+   όπως να ορίσετε όνομα συλλογής για μετάφραση σε διάφορες γλώσσες,
+   τον προσδιορισμό των διαδικτυακών portalboxes της συλλογής, να ορίσετε
+   επιλογές αναζήτησης, κτλπ, όπως εξηγείται σε αυτό τον οδηγό παρακάτω
+   στο τμήμα <a href="#3">Edit Collection Parameters</a>.
+   
+<a name="2.2"></a><h3>2.2 Προσθήκη συλλογής σε δένδρο</h3>
+</el>
+</lang>
 
 <p>To attach a collection to the tree, choose first which collection
 do you want to attach, then choose the father collection to attach to,
