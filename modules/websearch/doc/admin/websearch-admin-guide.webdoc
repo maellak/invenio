@@ -292,12 +292,24 @@ after adding a collection:
 </el>
 </lang>
 
-<p>To attach a collection to the tree, choose first which collection
+<p>
+<lang>
+<en>To attach a collection to the tree, choose first which collection
 do you want to attach, then choose the father collection to attach to,
 and then choose the fathership relation type between them (regular,
 virtual).
+</en>
+<el>Για να επισυνάψετε μία συλλογή στο δένδρο, πρώτα διαλέχτε ποια συλ-
+λογή θέλετε να επισηνάψετε, μετά διαλέχτε την συλλογή-πατέρα στην οποία
+θέλετε να την κολλήσετε, και τέλος διαλέχτε την μεταξύ τους σχέση(κανονική,
+εικονική).
+</el>
+</lang>
 
-<p>The difference between the regular and the virtual relationship
+
+<p>
+<lang>
+<en>The difference between the regular and the virtual relationship
 goes as follows:
 
     <ul>
@@ -344,8 +356,59 @@ The example presented above would then give us the following picture:
         [ ] Videos                   BBC Pictures and Videos
 </pre>
 </blockquote>
+</en>
+<el>Η διαφορά μεταξύ της κανονικής και της εικονικής σχέσης έχει ως
+εξής:
 
-<p>It is important to note that if a collection A is composed of B and
+    <ul>
+
+    <li><strong>Κανονική σχέση</strong>: Εάν η συλλογή Α έχει δημιουργηθεί
+	από τις Β και Γ, με τρόπο ώστε κάθε έγγραφο που ανήκει στην Α να
+	είναι είτε Β είτε Γ, τότε αυτό το σχήμα αντιστοιχεί στο κανονικό
+	είδος σχέσης. Για παράδειγμα, αν Α ισούται με "Πολυμέσα" και Β, Γ
+	"Φωτογραφίες", "Βίντεο" αντιστοίχως. Οι τελευταίες συλλογές τότε θα
+	δηλώνονται ως κανονικοί γιοί της "Πολυμέσα" και θα εμφανίζονται στην
+	αριστερή πλευρά του δένδρου κανονικής πλοήγησης με τίτλο "Περιορισμός 
+	με συλλογή" στο δένδρο συλλογών.
+
+    <li><strong>Εικονική σχέση</strong>: Εκτός από την τακτική διάσπασης 
+	του "Πολυμέσα" σε "Φωτογραφίες" και "Βίντεο", μπορεί να είναι 
+	πλεονεκτικό να παρουσιαστεί μία διαφορετική ορθογώνια άποψη του 
+	"Πολυμέσα", που δεν βασίζεται στον τύπο των εγγράφων όπως είδαμε 
+	παραπάνω, αλλά μάλλον στις πληροφορίες για τον δημιουργό του εγγράφου.
+	Αν σκεφτεί κανείς οτι κάποιο(μεγάλο) μέρος του πολυμεσικού υλικού 
+	δημιουργήθηκε από το "Πανεπιστήμιο Πολυμεσικών Υπηρεσιών" και 
+	κάποιο(μικρό) κομμάτι από εξωτερικές εταιρίες ραδιοτηλεόρασης όπως 
+	το BBC. Μπορεί να είναι πλεονεκτικό να διαφημίζουμε αυτή την άποψη
+	στους τελικούς χρήστες επίσης, ώστε να είναι σε θέση να μπορούν 
+	εύκολα να πλοηγούνται στο είδος του υλικού πολυμέσων που αναζητούν.
+	Μπορούμε να δημιουργήσουμε δύο ακόμα συλλογές με ονόματα "Πανεπιστήμιο
+	Πολυμεσικών Υπηρεσιών" και "BBC Φωτογραφίες και Βίντεο" και να τα ορίσουμε
+	εικονικούς γιούς της συλλογής "Πολυμέσα". Τότε, αυτές οι συλλογές θα 
+	εμφανίζονται στην δεξιά πλευρά του δένδρου εικονικής πλοήγησης με 
+	τίτλο "Εστίαση πάνω" στο δένδρο συλλογών.
+          
+    </ul>
+
+Το παράδειγμα που παρουσιάζεται παρακάτω θα μας δώσει την ακόλουθη εικόνα:
+
+<blockquote>
+<pre>
+	Π ο λ υ μ έ σ α
+        
+        Περιορισμός με συλλογή:      Εστίαση πάνω:
+        --------------------         ---------
+        [ ] Φωτογραφίες               Πανεπιστήμιο Πολυμεσικών Υπηρεσιών
+        [ ] Βίντεο                    BBC Φωτογραφίες και Βίντεο
+</pre>
+</blockquote>
+
+</el>
+</lang>
+
+<p>
+<lang>
+<en>It is important to note that if a collection A is composed of B and
 C as its regular sons, and offers X and Y as its virtual sons, then
 every document belonging to A must also belong to either B or C.  This
 requirement does not apply for X and Y, because X and Y offer only a
@@ -359,8 +422,27 @@ particular "focus-on" relationship, provided that this "virtual" point
 of view on A interests her.
 
 <a name="2.3"></a><h3>2.3 Modify existing tree</h3>
+</en>
+<el>Είναι σημαντικό να σημειωθεί ότι αν μία συλλογή Α αποτελείται από 
+τις Β, Γ και τους κανονικούς γιούς τους, και προσφέρει τις Χ, Υ σαν 
+εικονικούς γιούς, τότε κάθε έγγραφο που ανήκει που ανήκει στην Α πρέπει
+επίσης να ανήκει είτε στην Β είτε στην Γ. Αυτή η απαίτηση δεν ισχύει για
+τις Χ, Υ, επειδή οι Χ,Υ προσφέρουν μόνο "Εστίαση πάνω" στην ορθογώνια όψη
+σε ένα(πιθανόν μικρό) κομμάτι του σώματος του εγγράφου της Α. Αν οι τελικοί
+χρήστες αναζητήσουν την συλλογή Α, τότε πραγματικά ψάχνουν στις Β,Γ και όχι 
+στις Χ,Υ. Εάν όμως θέλουν να αναζητήσουν μέσα στις Χ ή Υ, πρέπει να κλικάρουν
+τις Χ,Υ πρώτα. Κάποιος μπορεί να θεωρήσει τα εικονικά κλαδιά ως ένα είδος 
+μη ουσιώδης βοήθειας στην αναζήτηση των τελικών χρηστών, αφού ενεργοποιούνται
+μόνο όταν οι χρήστες ενδιαφέρονται σε μία συγκεκριμένη "Εστίαση πάνω" σχέση, 
+υπό της προϋπόθεση ότι αυτή η "εικονική" άποψη της Α έχει ενδιαφέρον.
 
-<p>To modify existing tree by WebSearch Admin Interface, click on
+<a name="2.3"></a><h3>2.3 Επεξεργασία υπάρχοντος δένδρου</h3>
+</el>
+</lang>
+
+<p>
+<lang>
+<en>To modify existing tree by WebSearch Admin Interface, click on
 icons displayed next to collections.  The meaning of icons is as
 follows:
 
@@ -401,6 +483,53 @@ follows:
 </table>
 
 <a name="3"></a><h2>3. Edit Collection Parameters</h2>
+</en>
+<el>Για να τροποποιήσετε ένα υπάρχον δένδρο από την διαχειριστική διεπαφή WebSearch,
+πατήστε στα εικονίδια που εμφανίζονται δίπλα στις συλλογές. Το νόημα των εικονίδιων
+έχει ως ακολούθως:
+
+
+<table border="1">
+<tr>
+ <td>
+  <img border="0" src="<CFG_SITE_URL>/img/iconcross.gif">
+ </td>
+ <td>
+  Για να αφαιρέσετε επιλεγμένη συλλογή μαζί με τις υποσυλλογές της από το 
+  δένδρο συλλογών, αλλά χωρίς να διαγράψετε την ίδια την συλλογή.
+  (Για πλήρης διαγραφή μίας συλλογής, δείτε <a href="#3.4">section 3.4</a>.)
+  </td>
+</tr>
+<tr>
+ <td>
+  <img border="0" src="<CFG_SITE_URL>/img/arrow_up.gif"> &nbsp;
+  <img border="0" src="<CFG_SITE_URL>/img/arrow_down.gif">
+ </td>
+ <td>
+  Για να μετακινήσετε μία επιλεγμένη συλλογή πάνω ή κάτω ανάμεσα από 
+  αδερφούς κ΄ αδερφές, δηλαδή να αλλάξετε της σειρά των συλλογών μέσα
+  στο ίδιο επίπεδο ενός δένδρου.
+ </td>
+</tr>
+<tr>
+ <td>
+  <img border="0" src="<CFG_SITE_URL>/img/move_from.gif">
+  <img border="0" src="<CFG_SITE_URL>/img/move_to.gif">
+ </td>
+ <td>
+  Για να μετακινήσετε επιλεγμένη συλλογή ανάμεσα από κλαδιά ενός δένδρου
+  Πατήστε το πρώτο εικονίδιο (<img border="0" src="<CFG_SITE_URL>/img/move_from.gif">)
+  για να διαλέξετε την συλλογή για να μετακινήσετε, και το δεύτερο εικονίδιο
+  (<img border="0" src="<CFG_SITE_URL>/img/move_to.gif">)
+  για να διαλέξετε την καινούρια συλλογή-πατέρα, ώστε η διαλεγμένη συλλογή να συνδεθεί.
+ </td>
+</tr>
+</table>
+
+<a name="3"></a><h2>3. Επεξεργασία παραμέτρων συλλογής</h2>
+
+</el>
+</lang>
 
 <p>To finalize setting up of a collection, you could and should edit
 many parameters, such as define list of records belonging to a
