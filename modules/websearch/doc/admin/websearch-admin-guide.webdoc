@@ -531,7 +531,9 @@ follows:
 </el>
 </lang>
 
-<p>To finalize setting up of a collection, you could and should edit
+<p>
+<lang>
+<en>To finalize setting up of a collection, you could and should edit
 many parameters, such as define list of records belonging to a
 collection, define search fields, define search interface page
 portalboxes, etc.  In this section we will subsequently describe all
@@ -540,15 +542,40 @@ href="<CFG_SITE_URL>/admin/websearch/websearchadmin.py/editcollection?colID=1">E
 Collection</a> pages of the WebSearch Admin Interface.
 
 <a name="3.1"></a><h3>3.1 Modify collection query</h3>
+</en>
+<el>Για να ολοκληρωθεί η δημιουργία μίας συλλογής, θα μπορούσατε και θα 
+έπρεπε να επεξεργαστείτε πολλές παραμέτρους, όπως η λίστα με τις εγγραφές
+που ανήκουν σε μία καθορισμένη συλλογή, να ορίσετε τα πεδία αναζήτησης, 
+τα portalboxes της σελίδας αναζήτησης, κτλπ. Σε αυτή την ενότητα θα 
+περιγράψουμε στην συνέχεια όλες τις πιθανές δυνατότητες όπως παρουσιάζονται
+στις <a href="<CFG_SITE_URL>/admin/websearch/websearchadmin.py/editcollection?colID=1">Edit
+Collection</a> σελίδες της διαχειριστικής διεπαφής WebSearch.
 
-<p>The <em>collection query</em> defines which documents belong to the
+<a name="3.1"></a><h3>3.1 Τροποποίηση συλλογής ερωτημάτων(query)</h3>
+</el>
+</lang>
+
+<p>
+<lang>
+<en>The <em>collection query</em> defines which documents belong to the
 given collection.  It is equal to the search term that retrieves all
 documents belonging to the given collection, exactly as you would have
 typed it into the search interface.  For example, to define a
 collection of all papers written by Ellis, you could set up your
 collection query to be <code>author:Ellis</code>.
+</en>
+<el>Το <em>ερώτημα(query) συλλογών</em> καθορίζει ποια έγγραφα ανήκουν στην 
+δεδομένη συλλογή. Ισούται με τον όρο αναζήτησης που ανακτά όλα τα 
+έγγραφα που ανήκουν στην δεδομένη συλλογή, ακριβώς όπως θα τα είχατε 
+πληκτρολογήσει στην διεπαφή αναζήτησης. Για παράδειγμα, για να ορίσετε
+μία συλλογή όλων των εγγράφων που γράφτηκαν από τον Makis, θα μπορούσατε
+να δημιουργήσετε το δικό σας ερώτημα(query) να είναι <code>author:Makis</code>.
+</el>
+</lang>
 
-<p>Usually, the collection query is chosen on the basis of the
+<p>
+<lang>
+<en>Usually, the collection query is chosen on the basis of the
 collection identifier that we store in MARC tag 980.  This tag is
 indexed in a logical field called <code>collection</code> so that a
 collection of Theses could be defined via
@@ -559,8 +586,24 @@ collection of metadata documents, but also and as a logical field
 name.  We should have probably called the latter
 <code>collectionidentifier</code> or somesuch instead, but we hope the
 difference is clear from... the context.)
+</en>
+<el>Συνήθως, το ερώτημα συλλογών επιλέγεται με βάση το αναγνωριστικό
+συλλογής που αποθηκεύουμε στο MARC tag 980.  Αυτό το αναγνωριστικό
+αναπροσαρμώζεται σε ένα λογικό πεδίο με όνομα <code>collection</code>
+έτσι ώστε μία συλλογή από Thesi θα μπορούσε να οριστεί μέσω
+<code>collection:THESIS</code>, αν υποτεθεί ότι κάθε εγγραφή μεταδεδομένων 
+της Thesis έχει πάρει το κείμενο <code>THESIS</code> σε MARC tag 980.
+(Nitpick: χρησιμοποιούμε τον όρο 'συλλογή' σε δύο περιπτώσεις εδώ: μία 
+σαν μία συλλογή από έγγραφα μεταδεδομένων, αλλά επίσης και σαν όνομα
+λογικού πεδίου. Θα έπρεπε μάλλον να ονομάσουμε το τελευταίο 
+<code>collectionidentifier</code> ή κάτι παρόμοιο αν' αυτού, αλλά ελπίζουμε
+ότι η διαφορά είναι ξεκάθαρη... από το περιεχόμενο.)
+</el>
+</lang>
 
-<p>If a collection does not have any collection query defined, then
+<p>
+<lang>
+<en>If a collection does not have any collection query defined, then
 its content is defined by means of the content of its descendants
 (subcollections).  This is the case for composed collections.  For
 example, the composed collection <em>Articles & Preprints</em> (no
@@ -568,34 +611,100 @@ query defined) will be defined as a father of <em>Articles</em>
 (query: <code>collection:ARTICLE</code>) and <em>Preprints</em>
 (query: <code>collection:PREPRINT</code>).  In this case the
 collection query for <em>Articles & Preprints</em> can stay empty.
+</en>
+<el>Εάν μία συλλογή δεν έχει κανένα ερώτημα συλλογής προσδιορισμένο, 
+τότε το περιεχόμενο της ορίζεται από νόημα από τα περιεχόμενα των 
+απογόνων(υποσυλλογών). Αυτή είναι μία περίπτωση για σύνθετες συλλογές.
+Για παράδειγμα, η σύνθετη συλλογή <em>Articles & Preprints</em> (κανένα
+ερώτημα δεν έχει οριστεί) θα ορίζεται σαν πατέρας του <em>Articles</em>
+(query: <code>collection:ARTICLE</code>) και <em>Preprints</em>
+(query: <code>collection:PREPRINT</code>). Σε αυτή την περίπτωση το 
+ερώτημα συλλογής για την <em>Articles & Preprints</em> μπορεί να
+παραμείνει άδειο.
+</el>
+</lang>
 
-<p>Note that you should avoid defining non-empty collection query in
+<p>
+<lang>
+<en>Note that you should avoid defining non-empty collection query in
 cases the collection has descendants, since it will prevail and the
 descendants may not be taken into account.  In the same way, if a
 collection doesn't have any query nor any descendants defined, then
 its contents will be empty.
+</en>
+<el>Σημειώστε ότι θα πρέπει να αποφύγετε να ορίζετε μη-κενά ερωτήματα 
+συλλογών σε περιπτώσεις που η συλλογή έχει απογόνους, δεδομένου ότι 
+θα επικρατήσει και οι απόγονοι δεν θα μπορούν να ληφθούν υπόψη. Κατά
+τον ίδιο τρόπο, εάν μία συλλογή δεν έχει κανένα ερώτημα ούτε από απογόνους
+που ορίζονται, τότε τα περιεχόμενα της θα είναι άδεια.
+</el>
+</lang>
 
-<p>To define an external hosted collection set up the query to begin with
+<p>
+<lang>
+<en>To define an external hosted collection set up the query to begin with
 <code>hostedcollection:</code> (for more detailed information see <a href="#4">section 4</a>)
+</en>
+<el>Για να ορίσετε μία εξωτερική φιλοξενούμενη συλλογή ορίστε το ερώτημα
+να ξεκινάει με <code>hostedcollection:</code> (για περισσότερες λεπτομερέστερες
+πληροφορίες δείτε <a href="#4">section 4</a>)
+</el>
+</lang>
 
-<p>To remove the collection query, set the parameter empty.
+<p>
+<lang>
+<en>To remove the collection query, set the parameter empty.
 
 <a name="3.2"></a><h3>3.2 Modify access restrictions</h3>
+</en>
+<el>Για να αφαιρέσετε ένα ερώτημα(query) συλλογής, ορίστε την
+παράμετρο κενή.
 
-<p>Until <em>Invenio-0.92.1</em> there was the possibility to directly
+<a name="3.2"></a><h3>3.2 Τροποποίηση περιορισμούς πρόσβασης</h3>
+</el>
+</lang>
+
+<p>
+<lang>
+<en>Until <em>Invenio-0.92.1</em> there was the possibility to directly
 restrict a collection by specifying an Apache group. Users who had an
 Apache user and password belonging to the given group would have been able
-to access the restricted collection.</p>
+to access the restricted collection.
+</en>
+<el>Μέχρι το <em>Invenio-0.92.1</em> υπήρχε η δυνατήτητα για απευθείας 
+περιορισμό μίας συλλογής με τον ορισμό μιας ομάδας Apache. Οι χρήστες που 
+είχαν λογαριασμό και κωδικό Apache που ανήκει στην συγκεκριμένη ομάδα είχαν
+πρόσβαση σε αυτήν την συλλογή.
+</el>
+</lang></p>
 
-<p>Collection restriction managament is now integrated with the wider
+<p>
+<lang>
+<en>Collection restriction management is now integrated with the wider
 <a href="webaccess-admin-guide">Role Based Access Control</a>
-facility of Invenio.</p>
+facility of Invenio.
+</en>
+<el>Η διαχείρηση περιορισμών συλλογών τώρα ολοκλήρωμένη με την ευρύτερη
+<a href="webaccess-admin-guide">Role Based Access Control</a>
+ευκολία του Invenio.
+</el>
+</lang></p>
 
-<p>In order to restrict access to a collection you just have to create
+<p>
+<lang>
+<en>In order to restrict access to a collection you just have to create
 at least an authorization for the action <code>viewrestrcoll</code>
-specifying the name of the collection as the parameter</p>
+specifying the name of the collection as the parameter
+</en>
+<el>Προκειμένου να περιορίσετε την πρόσβαση σε μία συλλογή θα πρέπει
+να δημιουργήσετε τουλάχιστον μία άδεια για δράση <code>viewrestrcoll</code>
+προσδιορίζοντας το όνομα της συλλογής σαν παράμετρο.
+</el>
+</lang></p>
 
-<p>If you have just upgraded your installation from <em>CDS
+<p>
+<lang>
+<en>If you have just upgraded your installation from <em>CDS
 Invenio-0.92.1</em> you probably have run
 <code>collection_restrictions_migration_kit.py</code> tool in order
 to migrate to the new framework. For every Apache Group with access to a
@@ -607,27 +716,78 @@ to change these definition in order to softly migrate your restriction
 to whatever is your need.</p>
 
 <a name="3.3"></a><h3>3.3 Modify translations</h3>
+</en>
+<el>Αν έχετε μόλις αναβαθμίσει την εγκατάσταση από <em>CDS
+Invenio-0.92.1</em> πιθανόν να πρέπει να "τρέξετε" το
+<code>collection_restrictions_migration_kit.py</code> εργαλείο για να
+μεταναστεύσουν στο νέο πλαίσιο. Για κάθε ομάδα Apache με πρόσβαση σε 
+μία περιορισμένη συλλογή ένας ρόλος <em>role</em> θα δημιουργηθεί, με την
+κατάλληλη άδεια για πρόσβαση σε περιορισμένες συλλογές. Κάθε ρόλος θα
+έχει ένα <em>FireRole</em> ορισμό που θα καθορίζει να επιτρέπει την 
+συγκεκριμένη ομάδα Apache. Μέσω την διεπαφή διαχειριστή WebAccess θα είστε
+σε θέση να αλλάξετε αυτούς τους ορισμούς για να μπορείτε εύκολα να αλλάξετε
+τους περιορισμούς όποτε υπάρχει ανάγκη.
+</el>
+</lang>
 
-<p>You may define translations of collection names into the languages
+<p>
+<lang>
+<en>You may define translations of collection names into the languages
 of your Invenio installation.  Moreover, a collection name may be
 different in different contexts (e.g. long name, short name, etc), so
 that prior to modifying translations you will be asked to select which
 name type you want to change.
+</en>
+<el>Μπορείτε να ορίσετε τις μεταφράσεις των ονομάτων των συλλογών στις
+γλώσσες της εγκατάστασης του Invenio. Επιπλέον, ένα όνομα συλλογής μπορεί
+να είναι σε διαφορετικά πλαίσια(πχ μεγάλο όνομα, σύντομο όνομα, κτλπ), 
+οπότε πρίν από την τροποποίηση των μεταφράσεων θα σας ζητηθεί να διαλέξετε
+ποιον τύπο ονόματος θέλετε να αλλάξετε.
+</el>
+</lang>
 
-<p>The interface also lets you customize the labelling (and
+<p>
+<lang>
+<en>The interface also lets you customize the labelling (and
 translations) of the default collection boxes: "Focus on:", "Narrow
 by:" and "Latest addtions:".
+</en>
+<el>Η διεπαφή σας επιτρέπει επίσης να προσαρμόσετε την επισήμανση (και 
+μεταφράσεις) των κουτιών της default συλλογής: "Εστίαση πάνω:", "Περιορισμός
+από:" και "Πρόσφατες προσθήκες:"("Focus on:", "Narrow by:" and 
+"Latest addtions:").
+</el>
+</lang>
 
-<p>The translations aren't mandatory to define.  If a translation does
+<p>
+<lang>
+<en>The translations aren't mandatory to define.  If a translation does
 not exist in a language chosen by the end user, the end user will be
 shown the collection name in the default language of this
 installation.
+</en>
+<el>Οι μεταφράσεις δεν είναι υποχρεωτικό να οριστούνε. Εάν μία μετάφραση
+δεν υπάρχει στην επιλεγμένη γλώσσα από τον τελικό χρήστη, τότε στον τελικό
+χρήστη θα εμφανίζεται το όνομα της συλλογής της προεπιλεγμένης γλώσσας της 
+παρούσας εγκατάστασης.
+</el>
+</lang>
 
-<p>Note also that the list of available languages depends on the
+<p>
+<lang>
+<en>Note also that the list of available languages depends on the
 compile-time configuration (see the general <code>invenio.conf</code>
 file).
 
 <a name="3.4"></a><h3>3.4 Delete collection</h3>
+</en>
+<el>Σημειώστε επίσης ότι η λίστα των διαθέσιμων γλωσσών εξαρτάται από
+την διαμόρφωση μεταγλώττισης (δείτε το γενικό <code>invenio.conf</code>
+αρχείο).
+
+<a name="3.4"></a><h3>3.4 Διαγραφή συλλογής</h3>
+</el>
+</lang>
 
 <p>The collection to be deleted must be first removed from the
 collection tree.  Any metametadata associated with the collection
