@@ -789,7 +789,9 @@ file).
 </el>
 </lang>
 
-<p>The collection to be deleted must be first removed from the
+<p>
+<lang>
+<en>The collection to be deleted must be first removed from the
 collection tree.  Any metametadata associated with the collection
 (such as association to portalboxes, association to records belonging
 to this collection, etc) will be lost, but the metadata itself will be
@@ -797,8 +799,22 @@ preserved (such as portalboxes themselves, records themselves, etc).
 In total, association to records, output formats, translations, search
 options, sort options, search fields, ranking method, and access
 restriction will be lost.  Use with care!
+</en>
+<el>Η συλλογή που θα διαγραφεί πρέπει πρώτα να αφαιρεθεί από το 
+δένδρο συλλογών. Οποιοδήποτε μεταδεδομένο που συνδέεται με την συλλογή
+(όπως οι συνδέσεις στα portalboxes, συνδέσεις με εγγραφές που ανήκουν 
+σ' αυτή την συλλογή, κτλπ) θα χαθούν, αλλά τα ίδια τα μεταδεδομένα θα
+διατηρηθούν(όπως τα ίδια τα portalboxes, οι εγγραφές από μόνες τους, κτλπ).
+Συνολικά, συνδέσεις με εγγραφές, μορφές εξόδου, μεταφράσεις, επιλογές
+αναζήτησης, επιλογές ταξινόμησης, πεδία αναζήτησης, η μέθοδος κατάταξης, 
+καθώς και οι περιορισμοί πρόσβασης θα χαθούν. 
+Χρησιμοποιήστε το με προσοχή!
+</el>
+</lang>
 
-<p>It may be a good idea only to remove the collection from the end
+<p>
+<lang>
+<en>It may be a good idea only to remove the collection from the end
 users interface, but to keep it "hidden" in a corner they don't see
 and that they can't search when they search from Home.  To achieve
 this, do not delete the collection but simply remove it from the
@@ -809,17 +825,51 @@ Home page.  It will only be accessible via bookmarked URL, for
 example.
 
 <a name="3.5"></a><h3>3.5 Modify portalboxes</h3>
+</en>
+<el>Μπορεί να είναι μία καλή ιδέα να αφαιρέσετε μόνο την συλλογή από 
+την διεπαφή του τελικού χρήστη, αλλά να την κρατήσετε "κρυφή" σε μία 
+γωνία που δεν την βλέπουν και δεν μπορούν να την αναζητήσουν από την
+Αρχική σελίδα τους. Για να το πετύχετε αυτό, μην διαγράψετε την συλ-
+λογή αλλά απλώς αφαιρέστε την από το δένδρο συλλογών ώστε να μην είναι
+συνδεδεμένη σε καμία συλλογή-πατέρα. Σε αυτή την περίπτωση η σελίδα 
+διεπαφής της αναζήτησης για αυτή την συλλογή θα παραμείνει ενημερωμένη,
+αλλά δεν θα φαίνεται ούτε στο δένδρο όυτε θα είναι αναζητήσιμη από την 
+Αρχική σελίδα. Θα είναι μόνο προσβάσιμη μέσω σελιδοδείκτη URL, για
+παράδειγμα.
 
-<p>The search interface HTML page for a given collection may be
+<a name="3.5"></a><h3>3.5 Τροποποίηση portalboxes</h3>
+</el>
+</lang>
+
+<p>
+<lang>
+<en>The search interface HTML page for a given collection may be
 customized by what we call <em>portalboxes</em>.  Portalboxes are used
 to show various kinds of information to the end user, such as a text
 box with some inline help information about the given collection, an
 illustrative picture, etc.
+</en>
+<el>Η διεπαφή αναζήτησης στην HTML σελίδα για μία δωσμένη συλλογή μπορεί
+να είναι προσαρμοσμένη σε αυτό που ονομάζουμε <em>portalboxes</em>. Τα
+portalboxes χρησιμοποιούνται για να δείξουμε διάφορα είδη πληροφορίας
+στον τελικό χρήστη, όπως κείμενο με πληροφορία βοήθειας για την συγκεκριμένη
+συλλογή, μία επεξηγηματική εικόνα, κτλπ.
+</el>
+</lang>
 
-<p>To create a new portalbox, a title and a body must be given, where
+<p>
+<lang>
+<en>To create a new portalbox, a title and a body must be given, where
 the body can contain HTML if necessary.
+</en>
+<el>Για την δημιουργία ενός νέου portalbox, πρέπει να δωθεί ένας τίτλος
+κι ένα σώμα, όπου το σώμα μπορεί να περιέχει HTML αν χρειαστεί.
+</el>
+</lang>
 
-<p>To add a portalbox to the collection, you must choose an existing
+<p>
+<lang>
+<en>To add a portalbox to the collection, you must choose an existing
 portalbox, the language for which the portalbox should be shown, the
 position of the portalbox on the screen, and the ordering score of
 portalboxes.
@@ -844,18 +894,66 @@ presented in the same position and in the same language context.
 </ul>
 
 <a name="3.6"></a><h3>3.6 Modify search fields</h3>
+</en>
+<el>Για να προσθέσετε ένα portalbox σε συλλογή, θα πρέπει να διαλέξετε
+ένα ήδη υπάρχον portalbox, τη γλώσσα την οποία αυτό το portalbox πρέπει
+να εμφανίζεται, την θέση του portalbox στην οθόνη, και το βαθμολογία
+διάταξης των portalboxes.
 
-<p>The <em>search field</em> is a logical field (such as author,
+<ul>
+
+<li>Η <em>γλώσσα</em> θα μπορούσε να επιλεγεί ανάλογα με την γλώσσα
+που χρησιμοποιείται στο σώμα του portalbox. Δεδομένου ότι ένα portalbox
+δεν είναι απαραίτητα δεσμευμένο σε μία συγκεκριμένη γλώσσα, ένα portalbox
+μπορεί να επαναχρησιμοποιηθεί για διάφορες γλώσσες, το οποίο είναι 
+κατάλληλο για portalboxes που περιέχουν περιεχόμενο ανεξάρτητα από 
+γλώσσα όπως εικόνες.
+
+<li>Η <em>θέση</em> του portalbox στην οθόνη επιλέγεται από διάφορες
+προκαθορισμένες θέσεις, όπως πάνω-δεξιά, προ-τίτλου, μετά-τίτλου,
+πρίν-περιορισμό-από-συλλογή, κτλπ. Μπορείτε να παρουσιάσετε διάφορα
+portalboxes στην ίδια θέση στην ίδια γλώσσα, στην οποία περίπτωση
+θα εμφανίζονται με φθίνουσα σειρά βαθμολογίας.
+
+<li>Η <em>βαθμολογία</em> ορίζει την σειρά την σειρά των portalboxes
+που θα παρουσιάζονται στην ίδια θέση και στο ίδιο πλαίσιο γλωσσών.
+
+</ul>
+
+<a name="3.6"></a><h3>3.6 Τροποποίηση πεδίων αναζήτησης</h3>
+</el>
+</lang>
+
+<p>
+<lang>
+<en>The <em>search field</em> is a logical field (such as author,
 title, etc) that will be proposed to the end users in Simple and
 Advanced Search interface pages.  If you do not set any search fields
 for a collection, then a default list (author, title, year, etc) will
 be shown.
+</en>
+<el>Το <em>πεδίο αναζήτησης</em> είναι ένα λογικό πεδίο(όπως συγγραφέας,
+τίτλος, κτλπ) που θα προταθεί στους τελικούς χρήστες σε απλή και σύνθετη 
+αναζήτηση των σελίδων διεπαφών. Αν δεν έχετε ορίσει κανένα πεδίο αναζήτησης
+για μία συλλογή, τότε μία προεπιλεγμένη λίστα(συγγραφέας, τίτλος, χρονολογία,
+κτλπ) θα φαίνεται.
+</el>
+</lang>
 
-<p>Note that if you want to add a new logical field or modify existing
+<p>
+<lang>
+<en>Note that if you want to add a new logical field or modify existing
 physical MARC tags for a logical field, you have to use the <a
 href="<CFG_SITE_URL>/admin/bibindex/bibindexadmin.py">BibIndex Admin</a> interface.
 
 <a name="3.7"></a><h3>3.7 Modify search options</h3>
+</en>
+<el>Σημειώστε ότι αν θέλετα να προσθέσετε ένα λογικό πεδίο ή να τροποποιήσετε
+ήδη υπάρχον MARC tags για ένα λογικό πεδίο, θα πρέπει να χρησιμοποιήσετε
+την <a href="<CFG_SITE_URL>/admin/bibindex/bibindexadmin.py">BibIndex Admin</a>
+διεπαφή.
+</el>
+</lang>
 
 <p>The <em>search option</em> is like <a href="#3.6">search field</a>
 in a way that it permits the end user to narrow down his search to
