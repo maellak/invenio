@@ -955,7 +955,9 @@ href="<CFG_SITE_URL>/admin/bibindex/bibindexadmin.py">BibIndex Admin</a> interfa
 </el>
 </lang>
 
-<p>The <em>search option</em> is like <a href="#3.6">search field</a>
+<p>
+<lang>
+<en>The <em>search option</em> is like <a href="#3.6">search field</a>
 in a way that it permits the end user to narrow down his search to
 some logical field such as "subject", but unlike with the search field
 the user is not required to type his query in a free text form;
@@ -974,16 +976,51 @@ possibilites of distinct values to be matched in a given field
 (e.g. author, title, keyword); while the search option concept denotes
 the case of only a handful or so distinct values to be matched in a
 given field (e.g. subject, division, year).
+</en>
+<el>Η <em>επιλογή αναζήτησης</em> είναι σαν <a href="#3.6">search field</a>
+κατά τρόπο που επιτρέπει στον τελικό χρήστη να περιορίσει την αναζήτησή του
+σε κάποιο λογικό πεδίο όπως "θέμα", αλλά σε αντίθεση με το πεδίο αναζήτησης
+ο χρήστης δεν χρειάζεται να πληκτρολογήσει ερώτημα(query) σε μορφή ελεύθερου
+κειμένου' αλλά, η διεπαφή αναζήτησης προτείνει στον τελικό χρήστη μερικές
+ενδιαφέρουσες προκαθορισμένες τιμές έτοιμες από τους διαχειρηστές από τις
+οποίες ο χρήστης μπορεί να επιλέξει. Για παράδειγμα, ένα σενάριο "αναζήτησης
+συγγραφέα" είναι καλό παράδειγμα χρήσης πεδίων αναζήτησης, δεδομένου ότι
+υπάρχουν πολλά ονόματα συγγραφέων να ταιριάξουν, έτσι οι τελικοί χρήστες
+συνήθως θα τυπώσουν το όνομα που θέλουν να βρουν σε μορφή ελεύθερου κειμένου.
+Ενώ ένα σενάριο "αναζήτησης θέματος" είναι ένα καλό παράδειγμα για την χρήση 
+επιλογής αναζήτησης, αφού συνήθως υπάρχει ένας περιορισμένος από θέματα
+στο σύστημα δωσμένα από το τοπικό θέμα με το σύστημα ταξινόμησης, τα οποία
+οι τελικοί χρήστες δεν γνωρίζουν απαραίτητα και είναι ελεύθεροι να διαλέξουν
+από μία λίστα. Σαν κανόνας, το πεδίο αναζήτησης υποδηλώνει την περίπτωση με 
+απεριόριστο αριθμό δυνατότητων για διακριτές τιμές που πρέπει να συνδυάζονται
+με ένα δωσμένο πεδίο(πχ συγγραφέας, τίτλος, λέξη-κλειδί), όσο το σενάριο
+επιλογής αναζήτησης υποδηλώνει την περίπτωση που μόνο μία χούφτα από τιμές
+ταιριάζουν στο δωσμένο πεδίο(πχ θέμα, τμήμα, έτος).
+</el>
+</lang>
 
-<p>Search options are shown in the "Advanced Search" interfaces only,
+<p><lang>
+<en>Search options are shown in the "Advanced Search" interfaces only,
 while search fields are shown both in "Simple Search" and "Advanced
 Search" interface.  (Although if you want to add a search option to
 the "Simple Search" interface, you can achieve it by creating
 appropriate HTML code in a <a href="#3.5">portalbox</a>.)  The search
 options order, as well as the order of search option values, may be
 defined by means of 'move' arrows in the WebSearch Admin interface.
+</en>
+<el>Οι επιλογές αναζήτησης εμφανίζονται στις διεπαφές "Advanced Search"
+μόνο, ενώ τα πεδία εμφανίζονται και στην διεπαφή "Απλή Αναζήτηση" και
+στην "Advanced Search". (Αν και, αν θέλετε να προσθέσετε μία επιλογή
+αναζήτησης στην διεπαφή "Απλή Αναζήτηση", μπορείτε να το πετύχετε με 
+το να δημιουργήσετε κώδικα HTML σε <a href="#3.5">portalbox</a>.)
+Η παραγγελία επιλογών αναζήτησης, καθώς και η παραγγελία από τιμές
+επιλογών αναζήτησης, μπορεί να οριστούν μέσω της κίνησης των βέλων
+στο περιβάλλον διαχειριστή WebSearch.
+</el>
+</lang>
 
-<p>To add a new search option, a field name must first be chosen (for
+<p><lang>
+<en>To add a new search option, a field name must first be chosen (for
 example "subject") and then a list of possible field values must be
 entered (for example "Mathematics", "Physics", "Chemistry", "Biology",
 etc).  Note that if you want to add a new logical field or modify
@@ -991,17 +1028,43 @@ existing physical MARC tags for a logical field, you have to use the
 <a href="<CFG_SITE_URL>/admin/bibindex/bibindexadmin.py">BibIndex Admin</a> interface.
 
 <a name="3.8"></a><h3>3.8 Modify sort options</h3>
+</en>
+<el>Για να προσθέσετε μία νέα επιλογή αναζήτησης, ένα όνομα πεδίου πρέπει
+πρώτα να επιλεγεί(πχ "θέμα") και μετά πρέπει να εισαχθεί μία λίστα από 
+πιθανές τιμές πεδίου(πχ "Μαθηματικά", "Φυσική", "Χημεία", "Βιολογία", κτλπ).
+Σημειώστε ότι αν θέλετε να εισάγετε ένα νέο λογικό πεδίο ή να τροποποιήσετε
+υπάρχον φυσικά MARC tags για ένα λογικό πεδίο, πρέπει να χρησιμοποιήσετε
+την διεπαφή <a href="<CFG_SITE_URL>/admin/bibindex/bibindexadmin.py">BibIndex Admin</a>.
+</el>
+</lang>
 
-<p>You may define a list of logical fields that the end users will be
+<p><lang>
+<en>You may define a list of logical fields that the end users will be
 able to choose for the sorting purposes.  For example, "first author"
 or "year".  If you don't select anything, a default list (author,
 title, year, etc) will be shown.
+</en>
+<el>Μπορείτε να ορίσετε μία λίστα από λογικά πεδία που θα μπορούν να 
+διαλέξουν οι τελικοί χρήστες για σκοπούς ταξινόμησης. Για παράδειγμα, 
+"πρώτος συγγραφέας" ή "χρονολογία". Αν δεν διαλέξετε τίποτα, η 
+προκαθορισμένη λίστα(συγγραφέας, τίτλος, χρονολογία, κτλπ) θα εμφανίζεται.
+</el>
+</lang>
 
-<p>Note that if you want to add a new logical field or modify existing
+<p><lang>
+<en>Note that if you want to add a new logical field or modify existing
 physical MARC tags for a logical field, you have to use the <a
 href="<CFG_SITE_URL>/admin/bibindex/bibindexadmin.py">BibIndex Admin</a> interface.
 
 <a name="3.9"></a><h3>3.9 Modify rank options</h3>
+</en>
+<el>Σημειώστε ότι αν θέλετε να εισάγετε ένα νέο λογικό πεδίο ή να τροποποιήσετε
+υπάρχον φυσικά MARC tags για ένα λογικό πεδίο, πρέπει να χρησιμοποιήσετε
+την διεπαφή <a href="<CFG_SITE_URL>/admin/bibindex/bibindexadmin.py">BibIndex Admin</a>.
+
+<a name="3.9"></a><h3>3.9 Τροποποίηση επιλογών κατάταξης</h3>
+</el>
+</lang>
 
 <p>To enable a certain rank method for a collection, select the method
 from the "enable rank method" box and add it. The documents in this
