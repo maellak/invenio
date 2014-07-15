@@ -1475,7 +1475,8 @@ a new external collection, starting from the dictionary:
 </el>
 </lang>
 
-<p>Once the dictionary <code>key:value</code> pair has been added for the new
+<p><lang>
+<en>Once the dictionary <code>key:value</code> pair has been added for the new
 external collection the admin should implement (or simply use if already implemented)
 the search engine python class defined for this external collection. For the
 "<em>See also</em>" option the above steps are sufficient. If the admin wants
@@ -1494,23 +1495,67 @@ growing from them.
 
 
 <a name="5"></a><h2>5. Webcoll Status</h2>
+</en>
+<el>Μόλις το ζευγάρι λεξικού <code>key:value</code> προστεθεί για την καινούρια
+εξωτερική συλλογή ο διαχειριστής θα πρέπει να εισάγει(ή απλώς να χρησιμοποιήσει
+τhn ήδη εισαχθέντa) κλάση python για την μηχανή αναζήτησης που είναι ορισμένη για
+αυτή την εξωτερική συλλογή. Για την επιλογή "<em>Δείτε επίσης</em>" αυτά τα παρα-
+πάνω στάδια είναι επαρκή. Εάν ο διαχειριστής θέλει να καταστεί δυνατή η επιλογή
+"<em>External search [checked]</em>"("Εξωτερική αναζήτηση[επιλεγμένη]") τότε
+ένας parser πρέπει να εισαχθεί. Τέλος, για να ορίσει μια εξωτερική φιλοξενούμενη
+συλλογή ο διαχειριστής πρέπει επίσης να δημιουργήσει μία καινούρια τοπική συλλογή
+ονομασμένη ακριβώς όπως το κλειδί της εξωτερικής φιλοξενούμενης συλλογής
+<code>key:value</code> στο python λεξικό. Το ερώτημα της καινούριας τοπικής συλλογής
+πρέπει να ξεκινάει με <code>hostedcollection:</code> (σύμφωνα με την τρέχουσα 
+διαμόρφωση αρκεί για το ερώτημα από κάθε εξωτερική φιλοξενούμενη συλλογή απλώς να 
+έχει οριστεί σαν <code>hostedcollection:</code>) και η ίδια η συλλογή θα πρέπει να 
+είναι συνδεδεμένη στο δένδρο για να είναι ορατή στην αρχική σελίδα αναζήτησης.
+Σημειώστε οτι λόγω της φύσης των εξωτερικών φιλοξενούμενων συλλογών, οι τοπικές
+συλλογές με τις οποίες επικοινωνούν δεν μπορούν να έχουν καμία άλλη συλλογή σαν 
+παιδιά, με άλλα λόγια δεν θα πρέπει να έχουν κανένα κλαδί να μεγαλώνει από αυτές.
 
-<p>WebColl is the daemon that normally periodically runs via <a
+<a name="5"></a><h2>5. Κατάσταση Webcoll</h2>
+</el>
+</lang>
+
+<p><lang>
+<en>WebColl is the daemon that normally periodically runs via <a
 href="<CFG_SITE_URL>/help/admin/bibsched-admin-guide">BibSched</a> and that updates the
 collection cache with the collection parameters configured in the
 previous section.  Alternatively to running webcoll via BibSched, you
 can also run it any time you want from the command line, either for
 all collections or for selected collection only.  See the --help
 option.
+</en>
+<el>WebColl είναι ο δαίμονας που κανονικά τρέχει περιοδικά μέσω <a
+href="<CFG_SITE_URL>/help/admin/bibsched-admin-guide">BibSched</a> και 
+αυτός ενημερώνει την cache των συλλογών με τις παραμέτρους των συλλογών
+που είναι διαμορφωμένες στην προηγούμενη ενότητα. Εναλλακτικά για να 
+τρέξετε το WebColl μέσω BibSched, μπορείτε επίσης να το τρέξετε όποια 
+ώρα θέλετε από την γραμμή εντολών, είτε για όλες τις συλλογές είτε για
+επιλεγμένες συλλογές μόνο. Δείτε επίσης την επιλογή --help.
+</el>
+</lang>
 
-<p>The WebSearch Admin interface has got a WebColl Status menu that
+<p><lang>
+<en>The WebSearch Admin interface has got a WebColl Status menu that
 shows when the collection cache was last updated and when the next
 update is scheduled.  It warns in case something suspicious was
 discovered.
 
 <a name="6"></a><h2>6. Collections Status</h2>
+</en>
+<el>Η διαχειριστική διεπαφή WebSearch έχει ένα μενού κατάστασης WebColl
+που δείχνει πότε η cache συλλογών έχει ενημερωθεί τελευταία φορά και πότε
+είναι προγραμματισμένη η επόμενη ενημέρωση. Προειδοποιεί σε περίπτωση που
+κάτι ύποπτο ανακαλυφθεί.
 
-<p>The Collection Status menu of the WebSearch Admin interface shows
+<a name="6"></a><h2>6. Κατάσταση συλλογών</h2>
+</el>
+</lang>
+
+<p><lang>
+<en>The Collection Status menu of the WebSearch Admin interface shows
 the list of all collections and checks if there is anything wrong
 regarding configuration of collections, together with the languages
 the collection name has been translated into, etc.  Here is the
@@ -1557,6 +1602,60 @@ subcollections.
 </blockquote>
 
 <a name="7"></a><h2>7. Check External Collections</h2>
+</en>
+<el>Το μενού κατάστασης συλλογών της διαχειριστικής διεπαφής WebSearch δείχνει
+την λίστα όλων των συλλογών και ελέγχει εάν υπάρχει κάτι λάθος 
+σχετικά με την διαμόρφωση των συλλογών, μαζί με τις γλώσσες των συλλογών
+το όνομα των συλλογών μεταφράζεται, κτλπ. Εδώ είναι η λεπτομερή 
+επεξήγηση της λειτουργικότητας:
+
+<blockquote>
+<dl>
+
+<dt><strong>ID</strong>
+<dd>ID συλλογής.
+
+<dt><strong>Name</strong>
+<dd>Όνομα συλλογής.
+
+<dt><strong>Ερώτημα(Query)</strong>
+<dd>Το ερώτημα συλλογής που έχει οριστεί. Σημειώστε ότι θα πρέπει
+να είναι κενό αν μία συλλογή έχει υποσυλλογές. Εάν δεν είναι, τότε
+αυτό το ερώτημα χρειάζεται.
+
+<dt><strong>Υπο-συλλογές</strong>
+<dd>Οι υπο-συλλογές από τις οποίες αποτελείται η συλλογή. Σημειώστε ότι
+μία συλλογή που έχει οριστεί από ένα ερώτημα δεν πρέπει να έχει καθόλου
+υποσυλλογές.
+
+<dt><strong>Περιορισμένες</strong>
+<dd>Σε μία περιορισμένη συλλογή μπορούν να αποκτήσουν πρόσβαση μόνο
+οι χρήστες που ανήκουν στις ομάδες Apache που αναφέρονται στην 
+παρούσα στήλη.
+
+<dt><strong>Φιλοξενούμενες</strong>
+<dd>Μία φιλοξενούμενη συλλογή είναι πρακτικός μία εξωτερική η οποία συμπεριφέρεται
+σαν να ήταν τοπική.
+
+<dt><strong>I18N</strong>
+<dd>Δείχνει σε ποιές γλώσσες το όνομα της συλλογής έχει μεταφραστεί
+
+<dt><strong>Κατάσταση</strong>
+<dd>Εάν δεν βρεθούν σφάλματα, εμφανίζεται <em>OK</em> για κάθε συλλογή.
+Αν βρεθεί κάποιο σφάλμα, τότε εμφανίζονται ο αριθμός του σφάλματος και 
+ένα σύντομο μήνυμα. Τα νοήματα των μηνυμάτων για σφάλματα είναι τα
+ακόλουθα: <em>1:Σύγκρουση(Conflict)</em> που σημαίνει ότι η συλλογή
+ορίστηκε μέσω ερωτήματος αλλά επίσης και μέσω υποσυλλογών. 
+<em>2:Κενό(Empty)</em> που σημαίνει ότι η συλλογή δεν ορίστηκε ούτε 
+μέσω ερωτήματος ούτε μέσω υποσυλλογών.
+
+</dl>
+</blockquote>
+
+<a name="7"></a><h2>7. Έλεγχος εξωτερικών συλλογών</h2>
+
+</el>
+</lang>
 
 <p>The Check External Collections menu of the WebSearch Admin interface is a
 simple tool to check and control the consistency of the external collections
