@@ -14,27 +14,45 @@
 ## You should have received a copy of the GNU General Public License
 ## along with Invenio; if not, write to the Free Software Foundation, Inc.,
 ## 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
-
-<!-- WebDoc-Page-Title: Modules Overview -->
+<lang>
+<!-- WebDoc-Page-Title:<en> Modules Overview</en><el>Επισκόπηση Ενοτήτων</el></lang> -->
 <!-- WebDoc-Page-Navtrail: <a class="navtrail" href="<CFG_SITE_URL>/help/hacking">Hacking Invenio</a> -->
 <!-- WebDoc-Page-Revision: $Id$ -->
 
-
-<p>Invenio consists of several more or less independent modules with
+<lang>
+<p><en>Invenio consists of several more or less independent modules with
 precisely defined functionality.  The general criterion for module
 names is to use the ``Bib'' prefix to denote modules that work more
 with the bibliographic data, and the ``Web'' prefix to denote modules
 that work more with the Web interface.  (The difference is of course
 blurred in some cases, as in the case of search engine that has got a
 web interface but searches bibliographic data.)
+</en>
+<el>
+Το Invenio αποτελείται απο διαδοχικές λίγο ή πολύ ανεξάρτητες ενότητες με
+ακριβή ορισμό λειτουργείας. Γενικό κριτήριο για κάθε ενότητα είναι η χρήση του προθέματος
+"Bib" στο όνομα της ενότητας ώστε επισημαίνει το γεγονός οτι οι ενότητες λειτουργούν με βιβλιογραφικά 
+δεδομένα. Το πρόθεα "Web" χρησιμοποιείται για την επισήμανση του γεγονότος οτι οι ενότητες λειτουργούν
+με διεπαφές ιστού. (Η διαφορά είναι θόλη σε κάποιες περιπτώσεις, όπως στην περίπτωση της μηχανής αναζήτησης που έχει
+διεπαφές ιστού άλλα κάνει αναζήτηση για βιβλιογραφικά δεδομένα.)
+</el>
 </p>
+</lang>
 
-<p>Follows a brief description of what each module does.  After
+<lang>
+<p><en>Follows a brief description of what each module does.  After
 descriptions the module relationship diagram is presented.
+</en>
+<el>
+Παρακάτω ακολουθεί μια σύντομη περιγραφή της δουλείας κάθε ενότητας. Μέτα απο 
+κάθε περιγραφή ακολουθούν οι σχέσεις μεταξύ ενοτήτων.
+</el>
 </p>
+</lang>
 
 <ul>
-
+<lang>
+<en>
  <li><strong>BibCheck</strong> permits administrators and library
  cataloguers to automate various kind of tests on the metadata to see
  whether the metadata comply with quality standards.  For example,
@@ -45,15 +63,36 @@ descriptions the module relationship diagram is presented.
  or can even automatically correct some kind of errors.  (FIXME: not
  included in CVS yet.)
  </li>
+</en>
+<el>
+<li>
+<strong>BibCheck</strong> επιτρέπει στους διαχειρηστές και στους καταλογογράφους βιβλιοθηκών
+να αυτοματοποιήσουν τα διάφορα test στα μεταδεδομένα ώστε να ελέγξουν αν τα μεταδεδομένα συμπίπτουν 
+με τα πρότυπα ποιότητας. Για παράδειγμα, ορισμένα πεδία μεταδεδομένων έχουν ορισμένο μήκος τα οποία περιέχουν
+αριθμητικό περιεχόμενο το οποίο δεν πρέπει να είναι παρών όταν υπάρχουν κάποια άλλα πεδία και το περιεχομενό του
+θα πρέπει να ελέγχεται απο μια βάση εξουσιών ανάλογη με τις τιμές των πεδίων , κλπ. Η ενότητες μπορούν να αναφέρουν τα ευρήματα τους
+ή να διορθώνουν αυτόματα τα λάθη τους. (Το FIXME : δεν περιέχεται στο CVS ακόμα.) 
+</li>
+</el>
+</lang>
 
- <li><strong>BibClassify</strong> allows automatic extraction of
+<lang>
+ <li><strong>BibClassify</strong><en> allows automatic extraction of
  keywords from fulltext documents, based on the frequency of specific
  terms, taken from a controlled vocabulary. Controlled vocabularies
  can be expressed as simple text thesauri or as structured, RDF-compliant,
- taxonomies, to allow a semantic classification.
+ taxonomies, to allow a semantic classification.</en>
+ <el>
+  Δίνει την δυνατότητα αυτόματης εξαγώγης λέξεις-κλείδιων απο έγγραφα πλήρες κειμένου
+βασισμένου στην συχνότητα συγκεκριμένων όρων δεχόμενους απο ελεγχώμενο λεξιλόγιο. Τα
+ελεγχόμενα λεξιλόγια μπορούν να χαρακτηριστούν απο απλό κείμενο thesauri ή απο δομιμένο RDF-compliant και taxinomies
+ώστε να επιτρέπουν σημασιολογική κατάταξη. 
+ </el>
  </li>
+</lang>
 
- <li><strong>BibConvert</strong> allows metadata conversion from any
+<lang>
+ <li><strong>BibConvert</strong><en> allows metadata conversion from any
  structured or semi-structured proprietary format into any other
  format, typically the <a
  href="http://www.loc.gov/standards/marcxml/">MARC XML</a> that is
@@ -77,12 +116,33 @@ descriptions the module relationship diagram is presented.
  subject of information extraction task) and its processing involves
  several steps including record separation and field extraction upto
  transformation of source field values and their formatting.
+ </en>
+ <el>
+ επιτρέπει την μετατροπή μεταδεδομένων απο δομημένες ή ήμι-δομημένες ιδιόκτητες φόρμες σε άλλες φόρμες,
+τυπικά το <a href="http://www.loc.gov/standards/marcxml/">MARC XML</a> χρησιμοποιείται παραδοσιακά στο Invenio.
+Παρόλαυτα οι φόρμες εισόδου/εξόδου είναι πλήρως ρυθμίσιμο και δεν έχει δοκιμαστεί σε εισαγωγές δεδομένων περισσοτέρων απο μιά εκατοντάδα πηγών δεδομένων.
+ Η χρησιμότητα υποβόσκει στο γεγονος οτι τα  μη δομημένα γνωρίσματα της πηγής δεδομένων θεωρούνται γνώστα άλλα ορίζονται σε ποιο εκτενής ρυθμίσης πηγών δεδομένων.
+Αναπόφευκτα, το γεγονός αυτο οδηγεί σε υψηλής περιπλοκότητας ρύθμισεις της γλώσσας του BibConvert. Οι πιο συχνές ρυθμίσεις παρέχονται απο την διανομή του Invenio 
+όπως για δείγμα η ρύθμιση απο ένα πιστοποιήμενο Dublin Core σε ένα MARCXML.
+<br />Γενικά η ρυθμίσεις του BibConvert αποτελούνται απο δεδομένα περιγραφής πηγών και δεδομένα περιγραφής στόχων. Ο επεξεργαστής στην συνέχεια αναλύει τα δεδομένα
+εισόδου και δημιουργεί δομημένα δεδομένα αποτελέσματος με παρόμοιο τρόπο όπως o XSLT επεξεργαστής θα έκανε. Τυπικά το BibConvert στοχέυει στην
+χρησιμότητα τον δεδομένων εισόδου τα οποία δεν διατίθενται απο μια παρουσίαση XML. Τα δεδομένα πηγής είναι απαραίτητο να είναι δομημένα ή ήμι-δομημένα (π.χ 
+δεν εκφράζονται σε φυσική γλώσσα η πληροφορίες εξαγώμενων λειτουργίων) και η επεξεργασία περιλαμβάνει διάφορα βήματα περιέχοντας διαχωρισμό εγγραφών και 
+εξαγωγή πεδίων απο πεδία πηγης και την μορφοποιήση τους.
+ </el>
+</lang>
 
- <li><strong>BibEdit</strong> permits one to edit the metadata via a
- Web interface.
+<lang>
+ <li><strong>BibEdit</strong><en> permits one to edit the metadata via a
+ Web interface.</en>
+<el>
+επιτρέπει την σύνταξη των μεταδεδομένων μέσω της διεπαφής ίστου.
+</el>
  </li>
+</lang>
 
- <li><strong>BibFormat</strong> is in charge of formatting the
+<lang>
+ <li><strong>BibFormat</strong><en> is in charge of formatting the
  bibliographic metadata in numerous ways.  This truly enables the
  separation of data content administration and formatting layout.
  BibFormat can act in the background and format the records when
@@ -90,10 +150,22 @@ descriptions the module relationship diagram is presented.
  brief format used when displaying search results.<br/>
  The BibFormat settings can be administered either through a
  user-friendly web interface, or directly by editing human-readable
- configuration files.
+ configuration files.</en>
+<el>
+είναι υπεύθυνο για την μορφοποίηση των βιβλιογραφικών δεδομένων με διάφορους
+τρόπους. Δίνει έτσι την δυνατότητα διαχωρισμού των δεδομένων διαχειριστικού
+περιεχομένου και σχεδίων μορφοποίησης. Το BibFormat ενεργεί στο παρασκήνιο
+και μορφοποιεί τις εγγραφές όταν χρειάζεται, ή προ-μορφοποιεί τις εγγραφές
+για κάποιες εξόδους όπως η σύντομη μορφοποιήση που εμφανίζεται στα 
+αποτελέσματα αναζήτησης.<br /> Οι επιλογές του BibFormat διαχειρίζονται
+είτε μέσω διεπαφές φιλικές προς τον χρήστη ή άμεσα μέσω αρχείων ρύθμισης
+ευανάγνωστα απο ανθρώπους.
+</el>
  </li>
+</lang>
 
- <li><strong>OAIHarvest</strong> represents the <a
+<lang>
+ <li><strong>OAIHarvest</strong><en> represents the <a
  href="http://www.openarchives.org/">OAi-PMH</a> compatible harvester
  allowing the repository to gather metadata from fellow OAi-compliant
  repositories and the OAi-PMH repository management. Repository is
@@ -107,9 +179,24 @@ descriptions the module relationship diagram is presented.
  particularly interesting for institutes that are specialized in
  cross-archive and cross-disciplinary services provision, as for
  example the ARC service provider.
+</en>
+<el>
+αντιπροσωπεύει το <a href="http://www.openarchives.org/">OAi-PMH</a>
+έναν συμβατό συλλέκτη επιτρέποντας στο αποθετήριο να συλλέξει μεταδεδομένα
+απο φιλικό OAi-compliant αποθετήριο και διαχείρηση ΟAi-PMH αποθετηρίων. 
+Το αποθετήριο είναι άμεσα ενσωματομένο στην κορυφή στην κορυφή της βάσης
+δεδομένων και διαθέτει OAi διαχείρηση αποθετηρίου και επιτρέπει την εκτέλεση
+διαχειριστικών εργασιών στα αποθετήρια χώρια απο την ενότητα γενικών διαχειρί
+σεων. Η βάση δεδομένων ξεκινάει μερικώς ή εντελώς την συλλογή στο φάσμα
+του OAi-PMH προτοκώλλου. Στην περίπτωση αυτη, ολα τα δεδομένα που παρέχονται σε "ώμη" μορφή όπου η σημασιολογία
+των ατομικών ετικετών υποδεικνυεί μοναδικώς την σύμβαση ονοματοδοσίας MARC21. Το γεγονός αυτο είναι εξαιρετικά ενδιαφέρον για 
+ινστιτούτα τα οποία ειδικεύονται σε υπηρεσίες πειθαρχίας και αρχείου, π.χ ARC χορηγός υπηρεσιών.
+</el>
  </li>
+</lang>
 
- <li><strong>BibIndex</strong> module takes care of the indexation of
+<lang>
+ <li><strong>BibIndex</strong><en> module takes care of the indexation of
  metadata, references and full text files.  Two kinds of indexes --
  word and phrase index -- are being maintained.  The user can define
  several logical indexes (e.g. author index, title index, etc.) and
@@ -123,49 +210,108 @@ descriptions the module relationship diagram is presented.
  words that have changed in the input metadata record.  The indexes
  were designed with the aim to provide fast user-response search times
  and are faster than native MySQL (full text) indexes.
+</en>
+<el>η ενότητα αυτή μεριμνά για την τιμαριθμική αναπροσαρμογή των μεταδεδομένων,
+αναφορών και αρχείων πλήρους κειμένου. Υπάρχουν δύο ειδη δεικτών : λέξεων και 
+φράσεων. Ο χρήστης ορίζει διάφορους λογικούς δείκτες(π.χ δείκτης συγγραφέα,
+δείκτη τίτλου,κλπ.) και αναποκρίνεται σε ετικέτες φυσικών μεταδεδομένων MARC21
+τα οποία μπαίνουν στα λογικά πεδία δεικτών. Ένας δείκτης αποτελείται απο δύο 
+μέρη : (i) ένα άμεσο δείκτη σε λίστα διάφορων λέξεων(ή φράσεων) που βρίσκονται 
+στο δοθέν πεδίο με ένα σύνολο αναγνωριστικών εγγραφών στα οποία μπορεί να
+βρεθεί η λέξη που έχει δοθεί,(ii) αντίστροφος δείκτης σε σύνολο αναγνωριστικών
+εγγραφών σε ενα σύνολο λέξεων μια εγγραφής που έχει δοθεί η οποία θα μπεί στον
+επόμενο δείκτη. Αυτή η τεχνική δεικτοδότησης δύο μερων επιτρέπει άμεση ανανέωση
+μόνο σε λέξεις που έχουν αλλάξει στα μεταδεδομένα εγγραφών εισόδου. Οι δείκτες
+φτίαχτηκαν με σκοπό να προσφέρουν γρήγορες αποκρίσης χρήστων,χρονούς
+αναζητήσεων και είναι πιο γρήγοροι απο του παραδοσιακούς δείκτες MySQL.
+</el>
  </li>
+</lang>
 
- <li><strong>BibMatch</strong> permits to filter input XML files
+<lang>
+ <li><strong>BibMatch</strong><en> permits to filter input XML files
  against the database content, attempting to match records via certain
- criteria, for example to avoid doubly-inputted records.
+ criteria, for example to avoid doubly-inputted records.</en>
+<el>
+επιτρέπει το των φιλτράρισμα αρχείων XML εισόδου με τα περιεχόμενα της βάσης δεδομένων, επιχειρώντας να ταιριάξει τις εγγραφές
+σε συγκεκριμένα κριτήρια, π.χ για την αποφυγή διπλής εισοδού εγγραφής.
+</el>
  </li>
+</lang>
 
- <li><strong>BibRank</strong> permits to set up various ranking
+<lang>
+ <li><strong>BibRank</strong><en> permits to set up various ranking
  criteria that will be used later by the search engine.  For example,
  ranking by the word frequency, or by some metadata tag value such as
  journal name by means of the journal impact factor knowledge base, or
  even by the number of downloads of a particular paper.  Note that
- BibRank is independent of BibIndex.
+ BibRank is independent of BibIndex.</en>
+<el>
+επιτρέπει την ρύθμιση τάξεων κριτηρίων τα οποία θα χρησιμοποιηθούν αργότερα στην μηχανή αναζήτησης.
+Για παράδειγμα, τάξη με βάση την συχνότητα λέξεων ή με βάση κάποια τιμή ετικέτας μεταδεδομένων όπως όνομα ημερολογίου ή
+με βάση την επίπτωση ενός ημερολογίου στον παράγοντα γνώσης ή ακόμα και τον αριθμό λήψεων μια συγκεκριμένης σελίδας.
+Σημειώνεται οτι το BibRank είναι ανεξάρτητο απο το BibIndex.
+</el>
  </li>
+</lang>
 
- <li><strong>BibSched</strong> The bibliographic task scheduler is
+<lang>
+ <li><strong>BibSched</strong><en> The bibliographic task scheduler is
  central unit of the system that allows all other modules to access
  the bibliographic database in a controlled manner, preventing sharing
  violation threats and assuring the coherent execution of the database
  update tasks. The module comes with an administrative interface that
  allows to monitor the task queue including various possibilities of a
  manual intervention, for example to re-schedule queued tasks, change
- the task order, etc.
+ the task order, etc.</en>
+<el>
+είναι ο βιβλιογραφικός προγραμματιστής εργασιών και αποτελείται απο την κεντρική μονάδα του συστήματος η οποία επιτρέπει
+τις άλλες ενότητες να έχουν πρόσβαση στην βιβλιογραφική βάση δεδομένων σε ελεγχόμενο περιβάλλον,αποτρέποντας παραβίαση απειλών μοιρασμού και
+εξασφαλίζει την συνεκτική εκτέλεση των εργασιών ανανέωσης της βάσης δεδομένων.Η ενότητα αυτή προσφέρει διαχειριστική διεπαφή που επιτρέπει την
+επίβλεψη εργασιών ουράς περιλαμβάνοντας και διάφορες πιθανότητες χεριοκινητής παρέμβασης,π.χ αναπρογραμματισμός εργασιών ουράς, αλλαγή σειράς 
+εργασιών , κλπ.
+</el>
  </li>
+</lang>
 
- <li><strong>BibUpload</strong> allows to load the new bibliographic
+<lang>
+ <li><strong>BibUpload</strong><en> allows to load the new bibliographic
  data into the database. To effectuate this task the data must be a
  well-formed XML file that complies with the current metadata tag
  selection schema. Usually, the properly structured input files of
- BibUpload come from the BibConvert utility.
- </li>
+ BibUpload come from the BibConvert utility.</en>
+<el>
+επιτρέπει το φόρτωμα των νέων βιβλιογραφικών δεδομένων στην βάση δεδομένων.
+Για να γίνει αυτο τα δεδομένα θα πρέπει να είναι σε καλά διατυπομένα αρχεία XML 
+τα οποία θα συμφωνούν με την τρέχων ετικέτα μεταδεδομένων σχήματος επιλογής.
+Συνήθως, τα σώστα δομημένα αρχεία εισόδου του BibUpload έρχονται απο την χρήση του BibConvert.
+</el> 
+</li>
+</lang>
 
- <li><strong>ElmSubmit</strong> is an email submission gateway that
+<lang>
+ <li><strong>ElmSubmit</strong><en> is an email submission gateway that
  permits for automatic document uploads from trusted sources via
- email.  (Usually web submission or harvesting is preferred.)
+ email.  (Usually web submission or harvesting is preferred.)</en>
+<el>
+είναι μια πύλη υποβολής email η οποία επιτρέπει το αυτόματο ανέβασμα εγγράφων απο έμπιστες πηγές μέσω email.
+(Συνήθως προτιμάται υποβολή ιστού ή σύλλεξη.) 
+</el>
  </li>
+</lang>
 
- <li><strong>MiscUtil</strong> is a collection of miscellaneous
+<lang>
+ <li><strong>MiscUtil</strong><en> is a collection of miscellaneous
  utilities that other modules are using, like the international
- messages, etc.
+ messages, etc.</en>
+<el>
+είναι συλλογή απο δίαφορες υπηρεσίες που χρησιμοποιούν οι άλλες ενότητες , όπως διεθνή μηνύματα, κτλ.
+</el>
  </li>
+</lang>
 
- <li><strong>WebAccess</strong> module is responsible for granting
+<lang>
+ <li><strong>WebAccess</strong><en> module is responsible for granting
  access to users for performing various actions within the system.  A
  Role-Based Access Control (RBAC) technique is used, where users
  belong to several groups according to their role in the system.  Each
@@ -173,10 +319,20 @@ descriptions the module relationship diagram is presented.
  possible one more action arguments.  WebAccess is presently used
  mainly for the administrative interface.  There are basically two
  kinds of actions: (i) configuration of administrative modules and
- (ii) running administrative tasks.
+ (ii) running administrative tasks.</en>
+<el>
+	η ενότητα αυτή είναι υπεύθυνη για την χωρήγηση πρόσβασης στους χρήστες με σκοπό να εκτελέσουν διάφορες ενέργειες
+εντός συστήματος. Χρησιμοποιείται η τεχνική Ελέγχος πρόσβασης βασισμένη σε ρόλους(RBAC), κατα την οποία οι χρήστες ανήκουν σε 
+δίαφορες ομάδες ανάλογα με τον ρόλο τους στο σύστημα. Κάθε ομάδα χρηστών καλείται να εκτλέσει συγκεκριμένες εργασίες αναλόγως με ένα ή
+περισσότερα ορίσματα. To WebAccess χρησιμοποιείται κυρίως για διαχειριστικές διεπαφές. Στην ουσία εκτελεί δύο είδη ενεργειών: (i) ρύθμιση
+των διαχειριστικών ενοτήτων και (ii) τρέξιμο των διαχειριστικών εργασιών.
+</el>
  </li>
+</lang>
 
- <li><strong>WebAlert</strong> module allows the end user to be
+
+<lang>
+ <li><strong>WebAlert</strong><en> module allows the end user to be
  alerted whenever a new document matching her personal criteria is
  inserted into the database.  The criteria correspond to a typical
  user query as if it would be done via the search interface.  For
@@ -184,36 +340,71 @@ descriptions the module relationship diagram is presented.
  containing certain words, or of a certain subject, is inserted.  A
  user may create several alerts with a daily, weekly, or a monthly
  frequency.  The results of alert searches are either sent back to the
- user by email or can also be stored into her baskets.
+ user by email or can also be stored into her baskets.</en>
+<el>
+η ενότητα αυτή επιτρέπει στον τελικό χρήστη να ενημερώνεται για οποιοδήποτε καινούργιο έγγραφο προστίθεται και ταιρίαζει στα πρωσοπικά του κριτήρια.
+Τα κριτήρια ανταποκρίνονται στις αιτήσεις του χρήστη τυπικά όπως θα γινόταν μέσω μιας διεπαφής αναζήτησης. Για παράδειγμα, 
+ένας χρήστης ίσως χρειάζεται να ειδοποιήθει οταν ένα νέο έγγραφο εισέλθει και  περιέχει συγκεκριμένες λέξεις ή συγκεκριμένο θέμα.
+ Ο χρήστης μπορεί να δημιουργήσει πολλές διαφορετικές ειδοποιήσεις με ημερήσια,εβδομαδιαία ή μηνιαία συχνότητα. Τα αποτελέσματα των
+ειδοποιήσεων είτε στέλνονται πίσω στον χρήστη με email ή μπορούν να αποθηκευτούν στα καλάθια τους.
+</el>
  </li>
+</lang>
 
- <li><strong>WebBasket</strong> module enables the end user of the
+<lang>
+ <li><strong>WebBasket</strong><en> module enables the end user of the
  system to store the documents she is interested in in a personal
  basket or a personal shelf.  The concept is similar to popular
  shopping carts.  One user may own several baskets.  A basket can be
  either private or public, allowing a simple document sharing
- mechanism within a group.
+ mechanism within a group.</en>
+<el>
+επιτρέπει στον τελικό χρήστη του συστήματος να αποθηκεύει τα έγγραφα εκείνα που τον ενδιαφέρουν σε ενα προσωπικό καλάθι ή σε προσωπικό ράφι. H ιδέα είναι παρόμοια
+με τα διάσημα καρότσια για ψώνια. Ένας χρήστης μπορεί να κατέχει πολλά καλάθια. Σε ένα καλάθι μπόρει να είναι είτε δημόσιο είτε ιδιοτικό, επιτρέπωντας έτσι ένα 
+απλό μηχανισμό μοίρασμου έγγραφων εσωτερίκα του συστήματος.
+</el>
  </li>
+</lang>
 
- <li><strong>WebComment</strong> provides a community-oriented tool to
+<lang>
+ <li><strong>WebComment</strong><en> provides a community-oriented tool to
  rank documents by the readers or to share comments on the documents
  by the readers.  Integrated with the group-aware WebBasket, WebGroup,
  WebMessage tools, WebComment is at the heart of the social network
- features of the Invenio software.
+ features of the Invenio software.</en>
+<el>
+προσφέρει εργαλεία τα οποία αφορούν την κοινότητα με σκοπό την ταξινόμηση έγγραφων σύμφωνα με τους αναγνώστες ή με σκοπό τον μοιρασμό των σχολίων
+στα έγγραφα απο τους αναγνώστες. Η ομάδα των ενοτήτων WebBasket,WebGroup,τα εργαλεία του WebMessage και το WebComment αποτελούν την καρδία του 
+κοινώνικου συστήματος του λογισμικού Invenio.
+</el>
  </li>
+</lang>
 
- <li><strong>WebHelp</strong> presents some global user-level,
+<lang>
+ <li><strong>WebHelp</strong><en> presents some global user-level,
  admin-level, and hacker-level documenation on Invenio.  The
  module-specific documentation is included within each particular
- module.
+ module.</en>
+<el>
+παρουσιάζει τα επίπεδα εγγράφων στο Invenio(επίπεδο χρήστη,επίπεδο διαχειρηστή,επίπεδο-hacker). Σε κάθε ενότητα περιλαμβάνεται η 
+τεκμηρίωση των εγγράφων.
+</el>
  </li>
+</lang>
 
- <li><strong>WebMessage</strong> permits the communication between
+<lang>
+ <li><strong>WebMessage</strong><en> permits the communication between
  (possibly anonymous) end users via web message boards, to invite
- readers to join the groups, etc.
+ readers to join the groups, etc.</en>
+<el>
+επιτρέπει την επικοινωνία μεταξύ (πιθανώς ανόνυμου)τελικού χρήστη μέσω των πινάκων του web message, για να προσκαλέσει τους αναγνώστες να 
+λάβουν μέρος σε ομάδες, κλπ.
+</el>
  </li>
+</lang>
 
- <li><strong>WebSearch</strong> module handles user requests to search
+<lang>
+ <li><strong>WebSearch</strong><en> module handles user requests to search
  for a certain words or phrases in the database.  Two types of
  searching can be performed: a word search or a phrase search.  The
  system allows for complex boolean queries, regular expression
@@ -232,25 +423,57 @@ descriptions the module relationship diagram is presented.
  collections: for example, a document may be classified both according
  to its type (e.g. preprint, book) and according to its Dewey decimal
  classification number.  Such a flexible organization views allows for
- the creation of easy navigation schemata to the end users.
+ the creation of easy navigation schemata to the end users.</en>
+<el>
+είναι μια ενότητα που χειρίζειται τις απαιτήσεις αναζήτησης για μια συγκεκριμένη λέξη ή φράση στην βάση δεδομένων.
+Μπορούν να εκτελεστούν δύο τύποι αναζήτησης: αναζήτησης μιας λέξης ή αναζήτηση φράσης. Το σύστημα επιτρέπει τα πολύπλοκα boolean αιτήματα,
+κανονικές εκφράσεις ή σύνθετα μεταδεδομένα , ακόμα και αναφόρες όπως επίσης και αρχεία πλήρες κειμένου , εκτελεί αναζήτηση στην στιγμή ανεξατήτως τύπου.
+Οι χρήστες μπορούν να περιηγηθούν στο παρόν απο πλεύρας πινάκων. Άν δεν βρεθεί εύθυ ταίριασμα μεταξύ των προτύπων αιτημάτων χρήστων τοτε το σύστημα προτίνει
+εναλλακτικά αποτελέσματα ώς οδηγό για την αναζήτηση. Οι πίνακες αναζήτησης σχεδιάστηκαν για να προσφέρουν γρήγορη ανταπόκριση σε μεσαίου μεγέθους συλλογές 
+δεδομένων εως και 10<sup>6</sup> εγγραφές.
+<br />Το σώμα  μεταδεδομένων είναι οργανωμένο σε μεταδεδομένα συλλογής τα οποία ειναι ευθέως προσβάσιμα μέσω λειτουργίες περιηγητή, παρομοίως με την ιδέα των 
+καταλόγων ιστού. Η ορθογωνική όψη εγγράφων σώματος είναι ενεργοποιημένη για την διεπαφή αναζήτησης μέσω της ιδέας εικονικού σώματος: Για παράδειγμα, ένα έγγραφο
+μπορεί να ταξινομηθεί ταυτόχρονα ως πρός των τύπο (π.χ ανέκδοτο βιβλίο,εκδομένο βιβλίο) αλλά και ως προς τoν δεκαδίκo του Dewey αριθμό  κατάτηξης.
+Τέτοια ευλίγιστη οργάνωση όψεων επιτρέπει την δημιουργία εύκολης πλοήγησης σχήματος πρός τον τελικό χρηστη.
+</el>
  </li>
+</lang>
 
- <li><strong>WebSession</strong> is a session and user management
+<lang>
+ <li><strong>WebSession</strong><en> is a session and user management
  module that permits to differentiate between users.  Useful for
  personalization of the interface and services like personal baskets
- and alerts.
+ and alerts.</en>
+<el>
+είναι μια ενότητα συνεδρίας και διαχείρησης χρήστων η οποία επιτρέπει των διαχωρισμό μεταξύ χρηστών.
+Η ενότητα αυτή είναι χρήσιμη για εξατομίκευση διεπαφών και υπηρεσίες όπως προσωπικά καλάθια και ειδοποιήσεις.
+</el>
  </li>
+</lang>
 
- <li><strong>WebStat</strong> is a configurable system that permits to
+<lang>
+ <li><strong>WebStat</strong><en> is a configurable system that permits to
  gather statistics about the health of the server, the usage of the
- system, as well as about some particular system features.
+ system, as well as about some particular system features.</en>
+<el>
+είναι ένα σύστημα ρύθμισης το οποίο επιτρέπει την συλλόγη στατιστικών όσων αναφόρα την υγεία των εξυπηρετητών,
+χρήση συτήματος και επίσης καποία συγκεκριμένα χαρακτηριστικά του συστήματος.
+</el>
  </li>
+</lang>
 
- <li><strong>WebStyle</strong> is a library of design-related modules
- that defines look and feel of Invenio pages.
+<lang>
+ <li><strong>WebStyle</strong><en> is a library of design-related modules
+ that defines look and feel of Invenio pages.</en>
+<el>
+είναι μια βιβλιοθήκη που ασχολείται με τον σχεδιασμό των ενοτήτων η οποία ορίζει την εμφάνιση και αίσθηση των
+σελίδων του Invenio.
+</el>
  </li>
+</lang>
 
- <li><strong>WebSubmit</strong> is a comprehensive submission system
+<lang>
+ <li><strong>WebSubmit</strong><en> is a comprehensive submission system
  allowing authorized individuals (authors, secretaries and repository
  maintenance staff) to submit individual documents into the
  system. The submission system disposes of a flow-control mechanism
@@ -260,10 +483,19 @@ descriptions the module relationship diagram is presented.
  textual and image formats. This module also disposes of information
  extraction functionality, focusing on bibliographic entities such as
  references, authors, keywords or other implicit metadata.
+</en>
+<el>
+είναι ένα περιεκτικό σύστημα υποβολής το οποίο επιτρέπει εξουσιοδοτημένα άτομα (συγγραφείς,γραμματείς και στο προσωπικό
+συντήρησης αποθετηρίου) να υποβάλλει έγγραφα μεσα στο σύστημα. Η υποβολή συστήματος χρησιμοποιεί μηχανίσμο διαχείρησης ροής που
+εξασφαλίζει την αποδοχή των δεδομένων απο εξουσιοδοτημένες μονάδες. Γενικά υπάρχουν πολλές διαφορετικές εκμεταλεύσιμες υποβολές σχήματος στην 
+διαθεσή μας, περιλαμβάνοντας αυτόματη μετατροπή εγγράφων πλήρες κειμένου  σε διαφόρες άλλες κειμένου ή εικόνας. Αυτή η ενότητα επίσης προσφέρει
+πληροφορίες λειτουργίας εξαγωγής , επικεντρώνεται στις βιβλιογραφικές οντότητες όπως αναφορές,συγγραφείς,λέξεις κλειδία ή αλλα μεταδεδομένα.
+</el>
  </li>
+</lang>
 
 </ul>
-
-<p>Relationship between the modules: <br />
+<lang>
+<p><en>Relationship between the modules:</en><el>Σχέση μεταξύ ενοτήτων: </el> <br /></lang>
 <img src="<CFG_SITE_URL>/img/hacking/modules-overview-diagram.jpeg" border="0" alt="Modules overview diagram" />
 </p>
