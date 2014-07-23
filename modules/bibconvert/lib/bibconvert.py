@@ -33,7 +33,6 @@ CFG_BIBCONVERT_KB_PATH = "%s%sbibconvert%sKB" % (CFG_ETCDIR, os.sep, os.sep)
 
 ### Matching records with database content
 
-
 def parse_query_string(query_string):
     """Parse query string, e.g.:
 Input: 245__a::REP(-, )::SHAPE::SUP(SPACE, )::MINL(4)::MAXL(8)::EXPW(PUNCT)::WORDS(4,L)::SHAPE::SUP(SPACE, )||700__a::MINL(2)::REP(COMMA,).
@@ -42,7 +41,7 @@ Output:[['245__a','REP(-,)','SHAPE','SUP(SPACE, )','MINL(4)','MAXL(8)','EXPW(PUN
 
     query_string_out    = []
     query_string_out_in = []
-
+    sys.stderr.write('Inside parse_query_string')
     query_string_split_1 = query_string.split('||')
 
     for item_1 in query_string_split_1:
@@ -123,7 +122,7 @@ def get_other_par(par, cfg):
 
 def append_to_output_file(filename, output):
     "bibconvert output file creation by output line"
-
+    sys.stderr.write('appending to filename: ', filename)
     try:
         file = open(filename, 'a')
         file.write(output)
@@ -453,7 +452,7 @@ def parse_input_data_fx(source_tpl):
     """
 
     global separator
-
+    sys.stderr.write('inside parse_input_data_fx\n')
     count   = 0
     record  = ""
     field_data_1_in_list = []
@@ -602,7 +601,7 @@ def parse_input_data_d(source_data, source_tpl):
     """
 
     out = []
-
+    sys.stderr.write('inside parse_input_data_d\n')
     for source_field_tpl in read_file(source_tpl, 1):
         source_field_code = source_field_tpl.split("---")[0]
         source_field_data = read_file(source_data + source_field_code, 0)
@@ -611,7 +610,7 @@ def parse_input_data_d(source_data, source_tpl):
 
         out_data = [source_field_code, source_field_data]
         out.append(out_data)
-
+    sys.stderr.write('returning out:', out)
     return out
 
 
@@ -895,7 +894,7 @@ def FormatField(value, fn):
         item = sub_keywd(item)
         par_tmp.append(item)
     par = par_tmp
-
+    sys.stderr.write('Inside FormatField\n')
 
     if (fn == "RE"):
 
@@ -1404,7 +1403,7 @@ def format_field(value, fn):
         par_tmp.append(item)
     par = par_tmp
 
-
+    sys.stderr.write('Inside format_field\n')
     if (fn == "RE"):
 
         new_value = ""
@@ -1868,7 +1867,7 @@ def create_record(begin_record_header,
     sysno500             = generate("XDATE(%w%H%M%S)," + ssn5cnt)
 
 
-
+    sys.stderr.write('Inside create_record\n')
     for T_tpl_item_LIST in target_tpl_parsed:
         # the line is printed only if the variables inside are not empty
         print_line = 0
@@ -1974,7 +1973,7 @@ def create_record(begin_record_header,
                     printout = item[0]
                 else:
                     printout = item[current]
-                line_to_print.append(printout)
+                line_to_print.append(sys.stderrout)
             output = exp_n(string.join(line_to_print,""))
             global_formatting_functions = T_tpl_item_LIST[0].split("::")[1:]
             for GFF in global_formatting_functions:
@@ -2000,8 +1999,8 @@ def create_record(begin_record_header,
                 else:
                     output = FormatField(output, GFF)
 
-            if ((len(output) > set_conv()[0] and print_line == 1) or default_print):
-                out_to_print = out_to_print + output + "\n"
+            if ((len(output) > set_conv()[0] and print_line == 1) or default_sys.stderr):
+                out_to_print = out_to_sys.stderr + output + "\n"
 
             current = current + 1
 
@@ -2014,7 +2013,7 @@ def create_record(begin_record_header,
 
         if len(recID) == 1 and match_mode == 1:
             ctrlfield = "<controlfield tag=\"001\">%d</controlfield>" % (recID[0])
-            out_to_print = ctrlfield + "\n" + out_to_print
+            out_to_print = ctrlfield + "\n" + out_to_sys.stderr
             out_flag = 1
 
         if len(recID) == 0 and match_mode == 0:
@@ -2026,9 +2025,9 @@ def create_record(begin_record_header,
 
     if out_flag or match_mode == -1:
         if begin_record_header != "":
-            out_to_print = begin_record_header + "\n" + out_to_print
+            out_to_print = begin_record_header + "\n" + out_to_sys.stderr
         if ending_record_footer != "":
-            out_to_print = out_to_print + "\n" + ending_record_footer
+            out_to_print = out_to_sys.stderr + "\n" + ending_record_footer
     else:
         out_to_print = ""
 

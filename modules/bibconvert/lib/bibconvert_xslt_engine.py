@@ -63,6 +63,8 @@ CFG_BIBCONVERT_FUNCTION_NS = "http://cdsweb.cern.ch/bibconvert/fn"
 #        3 : 4suite
 processor_type = 0
 
+sys.stderr.write('inside xslt_engine\n')
+
 try:
     # lxml
     from lxml import etree
@@ -110,6 +112,7 @@ def bibconvert_function_lxml(dummy_ctx, value, func):
     if value is int, value is converted to string
     if value is Node (PyCObj), first child node (text node) is taken as value
     """
+    sys.stderr.write('inside bibconvert_functions_lxml ',dummy_ctx, '\n')
     try:
         if isinstance(value, str):
             string_value = value
@@ -139,6 +142,7 @@ def bibconvert_escape_lxml(dummy_ctx, value):
     """
     Bridge to lxml to escape the provided value.
     """
+    sys.stderr.write('inside bibconvert_escape_lxml ',dummy_ctx)
     try:
         if isinstance(value, str):
             string_value = value
@@ -178,6 +182,7 @@ def bibconvert_function_libxslt(dummy_ctx, value, func):
     if value is int, value is converted to string
     if value is Node (PyCObj), first child node (text node) is taken as value
     """
+    sys.stderr.write('Inside bibconvert_function_libxslt\n')
     try:
         if isinstance(value, str):
             string_value = value
@@ -199,6 +204,7 @@ def bibconvert_escape_libxslt(dummy_ctx, value):
     """
     Bridge to libxslt to escape the provided value.
     """
+    sys.stderr.write('Inside bibconvert_escape_libxslt\n')
     try:
         if isinstance(value, str):
             string_value = value
@@ -230,6 +236,7 @@ def bibconvert_function_4suite(dummy_ctx, value, func):
     if value is int, value is converted to string
     if value is Node, first child node (text node) is taken as value
     """
+    sys.stderr.write('Inside bibconvert_function_4suite\n')
     try:
         if len(value) > 0 and isinstance(value[0], Node):
             string_value = value[0].firstChild.nodeValue
@@ -274,6 +281,8 @@ def convert(xmltext, template_filename=None, template_source=None):
     @param template_source: The configuration describing the processing.
     @return: the transformed XML text, or None if an error occured
     """
+    sys.stderr.write('converting ', template_filename, ' to ', template_source, '\n')
+
     if processor_type == 0:
         # No XSLT processor found
         raise "No XSLT processor could be found"
@@ -454,7 +463,7 @@ def convert(xmltext, template_filename=None, template_source=None):
 ##     xmltext = record_get_xml(10, 'oai_dc')
 ##     profile.run('bc_profile()', "bibconvert_xslt_profile")
 ##     p = pstats.Stats("bibconvert_xslt_profile")
-##     p.strip_dirs().sort_stats("cumulative").print_stats()
+##     p.strip_dirs().sort_stats("cumulative").sys.stderr.write_stats()
 
 if __name__ == "__main__":
     pass
