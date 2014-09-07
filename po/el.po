@@ -13227,26 +13227,26 @@ msgstr "Επισκόπηση μεθόδων ταξινόμησης [?]"
 msgid "Add new rank method"
 msgstr "Προσθήκη νέας μεθόδου ταξινόμησης"
 
-msgid "Code"
-msgstr "Κώδικας"
+#: msgid "Code"
+#: msgstr "Κώδικας"
 
 msgid "Translations"
 msgstr "Μεταφράσεις"
 
-msgid "Collections"
-msgstr "Συλλογές"
+#: msgid "Collections"
+#: msgstr "Συλλογές"
 
 msgid "Rank method"
 msgstr "Μέθοδος Ταξινόμησης"
 
-msgid "Modify"
-msgstr "Τροποποίηση"
+#: msgid "Modify"
+#: msgstr "Τροποποίηση"
 
 msgid "Show Details"
 msgstr "Εμφάνιση Λεπτομερειών"
 
-msgid "Delete"
-msgstr "Διαγραφή"
+#: msgid "Delete"
+#: msgstr "Διαγραφή"
 
 
 msgid "Step 1 - Create new rank method   [?]"

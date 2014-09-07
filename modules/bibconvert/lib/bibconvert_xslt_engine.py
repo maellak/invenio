@@ -281,7 +281,6 @@ def convert(xmltext, template_filename=None, template_source=None):
     @param template_source: The configuration describing the processing.
     @return: the transformed XML text, or None if an error occured
     """
-    sys.stderr.write('converting ', template_filename, ' to ', template_source, '\n')
 
     if processor_type == 0:
         # No XSLT processor found

@@ -149,6 +149,8 @@ for opt, opt_value in opts:
             pass
         elif opt_value.endswith('.xsl'):
             pass
+        elif opt_value.endswith('.xq'):
+            print 'this is an xquery script'
         else:
             separator            = bibconvert.get_other_par("_RECSEP_", opt_value)
             output_rec_sep       = ""
@@ -274,6 +276,9 @@ elif opt_value.endswith('.xsl'):
         sys.stderr.write("An error occurred during the conversion.\n")
         sys.stderr.write(str(e))
         sys.exit(1)
+elif opt_value.endswith('.xq'):
+    # Bibconvert for xquery
+    print 'hello Bibconvert for xquery'
 else:
     # BibConvert for cfg
 
