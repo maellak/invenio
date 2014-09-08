@@ -25,4 +25,27 @@ Work in progress.
 
 """
 
+__revision__ = "$Id$"
+
+import sys
+import os
+
+from warnings import warn
+
+# By default use xqilla as xquery processor
+processor_type = 0
+try:
+    import simplexquery
+    processor_type = 1
+except ImportError:
+    pass
+
+if processor_type == 0:
+    sys.stderr.write("No xquery processor could be found.\n")
+
+print ('Inside xquery_engin')
+
+def convert(xmltext, xquery_file):
+    print('inside xquery_convert')
+
 

@@ -112,7 +112,6 @@ def bibconvert_function_lxml(dummy_ctx, value, func):
     if value is int, value is converted to string
     if value is Node (PyCObj), first child node (text node) is taken as value
     """
-    sys.stderr.write('inside bibconvert_functions_lxml ',dummy_ctx, '\n')
     try:
         if isinstance(value, str):
             string_value = value

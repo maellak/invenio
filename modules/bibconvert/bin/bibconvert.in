@@ -48,6 +48,7 @@ except ImportError, e:
 try:
     from invenio import bibconvert_bfx_engine
     from invenio import bibconvert_xslt_engine
+    from invenio import bibconvert_xquery_engine
 except ImportError, e:
     sys.stderr.write("Warning: %s" % e)
 
@@ -65,7 +66,7 @@ Examples:
        bibconvert -ctemplate.cfg < input.dat
        bibconvert -ctemplate.bfx < input.xml
        bibconvert -ctemplate.xsl < input.xml
-
+       bibconvert -xquery.xq < input.xml
  XSL and BFX options:
  -c,  --config             transformation stylesheet file
 
@@ -82,6 +83,7 @@ Examples:
  -E,  --record-footer      insert record footer
  -s,  --separator          record separator, default empty line (EOLEOL)
  -t,  --output_separator
+ -x,  --query              xquery file
 
  -m0,  		           match records using query string, output *unmatched*
  -m1,                      match records using query string, output *matched*
@@ -119,7 +121,7 @@ oai_identifier_from  = 1
 extract_tpl          = ""
 
 try:
-    opts, args = getopt.getopt(sys.argv[1:],"c:d:hVl:o:b:e:B:E:s:m:C:",
+    opts, args = getopt.getopt(sys.argv[1:],"c:d:hVl:o:b:e:B:E:s:m:C:x",
                                ["config",
                                 "directory",
                                 "help",
@@ -132,7 +134,8 @@ try:
                                 "record-footer",
                                 "separator",
                                 "match",
-                                "config-alt"
+                                "config-alt",
+                                "xquery"
                                 ])
 except getopt.GetoptError, err:
     usage(1, "Error: " + str(err))
@@ -149,8 +152,6 @@ for opt, opt_value in opts:
             pass
         elif opt_value.endswith('.xsl'):
             pass
-        elif opt_value.endswith('.xq'):
-            print 'this is an xquery script'
         else:
             separator            = bibconvert.get_other_par("_RECSEP_", opt_value)
             output_rec_sep       = ""
@@ -228,6 +229,9 @@ for opt, opt_value in opts:
         match_mode           = string.atoi(opt_value[0:1])
         query_string         = opt_value[1:]
 
+    elif opt in ["-x", "--query"]:
+        xquery_file = opt_value[1:] 
+
     elif opt in ["-C", "--config-alt"]:
         if opt_value[0:1] == "x":
             extract_tpl   = opt_value[1:]
@@ -279,6 +283,22 @@ elif opt_value.endswith('.xsl'):
 elif opt_value.endswith('.xq'):
     # Bibconvert for xquery
     print 'hello Bibconvert for xquery'
+    source_xml = sys.stdin.read()
+    try:
+        res = bibconvert_xquery_engine.convert(source_xml, extract_tpl)
+        if res is not None:
+            print res
+        else:
+            sys.exit(1)
+    except NameError, ne:
+        sys.stderr.write("Error: cannot use Bibconvert xquery engine.\n")
+        sys.stderr.write(str(ne))
+        sys.exit(1)
+    except Exception, e:
+        sys.stderr.write("An error occurred during the conversion.\n")
+        sys.stderr.write(str(e))
+        sys.exit(1)
+
 else:
     # BibConvert for cfg
 
