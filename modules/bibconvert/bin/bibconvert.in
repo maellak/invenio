@@ -121,7 +121,7 @@ oai_identifier_from  = 1
 extract_tpl          = ""
 
 try:
-    opts, args = getopt.getopt(sys.argv[1:],"c:d:hVl:o:b:e:B:E:s:m:C:x",
+    opts, args = getopt.getopt(sys.argv[1:],"c:d:hVl:o:b:e:B:E:s:m:C:",
                                ["config",
                                 "directory",
                                 "help",
@@ -134,8 +134,7 @@ try:
                                 "record-footer",
                                 "separator",
                                 "match",
-                                "config-alt",
-                                "xquery"
+                                "config-alt"
                                 ])
 except getopt.GetoptError, err:
     usage(1, "Error: " + str(err))
@@ -171,6 +170,8 @@ for opt, opt_value in opts:
                       CFG_BIBFORMAT_BFX_FORMAT_TEMPLATE_EXTENSION):
             pass
         elif opt_value.endswith('.xsl'):
+            pass
+        elif opt_value.endswith('.xq'):
             pass
         else:
             extract_tpl_parsed  = bibconvert.parse_common_template(extract_tpl,1)
@@ -229,9 +230,6 @@ for opt, opt_value in opts:
         match_mode           = string.atoi(opt_value[0:1])
         query_string         = opt_value[1:]
 
-    elif opt in ["-x", "--query"]:
-        xquery_file = opt_value[1:] 
-
     elif opt in ["-C", "--config-alt"]:
         if opt_value[0:1] == "x":
             extract_tpl   = opt_value[1:]
@@ -282,10 +280,13 @@ elif opt_value.endswith('.xsl'):
         sys.exit(1)
 elif opt_value.endswith('.xq'):
     # Bibconvert for xquery
-    print 'hello Bibconvert for xquery'
     source_xml = sys.stdin.read()
     try:
-        res = bibconvert_xquery_engine.convert(source_xml, extract_tpl)
+        # pass the template as a file object.
+        # TODO: Take into consideration the case
+        # where the extract_tpl is a simple string query
+        extract_tpl_f = open(extract_tpl, "r")
+        res = bibconvert_xquery_engine.convert(source_xml, extract_tpl_f)
         if res is not None:
             print res
         else:

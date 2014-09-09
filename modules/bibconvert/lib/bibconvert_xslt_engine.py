@@ -63,7 +63,6 @@ CFG_BIBCONVERT_FUNCTION_NS = "http://cdsweb.cern.ch/bibconvert/fn"
 #        3 : 4suite
 processor_type = 0
 
-sys.stderr.write('inside xslt_engine\n')
 
 try:
     # lxml
